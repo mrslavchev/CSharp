@@ -1,0 +1,9 @@
+TestStudio
+
+See http://www.telerik.com/automated-testing-tools/ to learn what does this team do. Requirements for the developer suspport position:
+
+Good diagnostic/troubleshooting skills. 80+% of our job is diagnosing customer problems. The person must enjoy solving puzzles.
+Very fluent in English, both speaking and written. Must be comfortable leading online meetings (in English only) to assist troubleshoot customer problems.
+Be very interested to learn basic programming – actual skills not required.
+Must have good customer relations/handling skills. We can teach them the specifics for our line of business but need someone who already has general experience e.g. someone who already worked in customer service even in a non-technical role will be great.
+Desire to learn Telerik Test Studio
