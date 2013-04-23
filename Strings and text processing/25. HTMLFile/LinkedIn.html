@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>LinkedIn</title>
+    <link rel="stylesheet" href="LinkedInStyle.css" />
+</head>
+<body>
+    <section>
+        <header>
+            <h1><a href="linkedin">LinkedIn</a></h1>
+            <nav>
+                <ul type="disc">
+                    <li><a href="*">Home</a></li>
+                    <li><a href="*">What is LinkedIn?</a></li>
+                    <li><a href="*">Join Today</a></li>
+                    <li>Sign In
+                        <form method="get" action="ok">
+                            <ul type="circle">
+                                <li>
+                                    <label for="mail">Email:</label>
+                                    <input type="text" id="mail" title="Email"/>
+                                </li>
+                                <li>
+                                    <label for="pass">Password:</label>
+                                    <input type="password" id="pass" title="Password"/>
+                                </li>
+                                <li>
+                                    <input type="submit" id="sign" value="Sign In"/>
+                                </li>
+                            </ul>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <article>
+            <h2>Over 175 million proffesionals use LinkedIn to exchange information, ideas and oportunities</h2>
+            <ul type="disc">
+                <li>Stay informed about your contacts and industry</li>
+                <li>Find the people & knowledge you need to achieve your goals</li>
+                <li>Control your professional identity online</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Join LinkedIn Today</h3>
+            <form>
+                Sign Up
+                <ul>
+                    <li>
+                        <label for="fName">First Name:</label>
+                        <br />
+                        <input type="text" title="First Name:" pattern="[A-Z a-z]+" id="fName"/>
+                    </li>
+                    <li>
+                        <label for="lname">First Name:</label>
+                        <br />
+                        <input type="text" title="Last Name:" pattern="[A-Z a-z]+" id="lName"/>
+                    </li>
+                    <li>
+                        <label for="appmail">Email:</label>
+                        <br />
+                        <input type="text" title="Email:" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" id="appmail"/>
+                    </li>
+                    <li>
+                        <label for="passw">Password:</label>
+                        <br />
+                        <input type="password" title="Password" pattern="[A-Z a-z 0-9]{6,}" id="passw"/>
+                        <br />
+                        6 or more characters
+                        <br />
+                    </li>
+                </ul>
+                <input type="submit" id="join" value="Join Now"/>
+            </form>
+            <br />
+            Already on LinkedIn? <a href="123">Sign in</a>
+        </article>
+        <br />
+        <br />
+        <article>
+            <h3>Search for someone by name:</h3>
+            <form method="get">
+                <ul>
+                    <li>
+                        <label for="searchFName">First Name:</label>
+                        <input type="text" placeholder="First Name" title="First name" pattern="[A-Z a-z]+" id="searchFName"/>
+                    </li>
+                    <li>
+                        <label for="searchLName">Last Name:</label>
+                        <input type="text" placeholder="Last Name" title="Last name" pattern="[A-Z a-z]+" id="searchLName"/>
+                    </li>
+                </ul>
+                <input type="submit" id="search" value="Go" />
+            </form>
+        </article>
+    </section>
+</body>
+</html>
