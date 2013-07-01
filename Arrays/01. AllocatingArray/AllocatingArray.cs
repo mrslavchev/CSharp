@@ -7,19 +7,31 @@ class AllocatingArray
 {
     static void Main()
     {
-        Console.WriteLine("Please enter 20 integers:");
-        int[] integers =new int [20];
-        for (int index = 0; index < integers.Length; index++)
-        {
-            integers[index] = int.Parse(Console.ReadLine());
+        int[] integerArray = new int[20];
+        Random filler = new Random();
+        for (int i = 0; i < integerArray.Length; i++)// a lazy way to fill the array with random
+        {                                            // values we use ramdom generator and add
+            int fill = filler.Next(0, 100);          // one random value 0-100 on each iteration
+            integerArray[i] = fill;                  
         }
 
-        Console.WriteLine("Initialised values are: ");
-        for (int i = 0; i < integers.Length; i++)
+        Console.WriteLine("Primary array:");
+        foreach (var item in integerArray)
         {
-            integers[i] = i * 5;
-            Console.WriteLine(integers[i]);
+            Console.Write(item + ", ");
         }
+        Console.WriteLine();
+        for (int i = 0; i < integerArray.Length; i++)
+        {
+            integerArray[i] = i * 5;
+        }
+
+        Console.WriteLine("Modified array::");
+        foreach (var item in integerArray)
+        {
+            Console.Write(item + ", ");
+        }
+        Console.WriteLine();
     }
 }
 

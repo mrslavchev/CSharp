@@ -2,7 +2,7 @@
 using System;
 
 class CompareTwoArrays
-{
+{   // using a separate method to fill to read ints from the console
     static int[] ReadingNumbers ()
     {
         Console.WriteLine("Please enter the size of the array: ");
@@ -15,23 +15,28 @@ class CompareTwoArrays
         }
         return arr;
     }
+
     static void Main()
     {
-        int[] integers = ReadingNumbers();
-        int[] numbers = ReadingNumbers();
+        int[] firstArr = ReadingNumbers();
+        int[] secondArr = ReadingNumbers();
         int matchCount = 0;
-        if (integers.Length == numbers.Length)
+        if (firstArr.Length == secondArr.Length)
         {
-            for (int i = 0; i < integers.Length; i++)
-            {
-                if (integers[i] == numbers[i])
-                {
-                    matchCount += 1;
+            Array.Sort(firstArr);
+            Array.Sort(secondArr);
+            Console.WriteLine();
+            for (int i = 0; i < firstArr.Length; i++)                // If lengths are equal we compare each
+            {                                                        // two corresponding elements
+                if (firstArr[i] == secondArr[i])                     // If their count equals element count
+                {                                                    // arrays match. If we have a case
+                    matchCount += 1;                                 // with same array but in different order
+                    if (matchCount == firstArr.Length)               // we may solve it with sorting both arrays
+                    {
+                        Console.WriteLine("The two arrays match");
+                    }
                 }
-                else if (matchCount == integers.Length)
-                {
-                    Console.WriteLine("The two arrays match");
-                }
+         
                 else
                 {
                     Console.WriteLine("The two arrays don't match");
