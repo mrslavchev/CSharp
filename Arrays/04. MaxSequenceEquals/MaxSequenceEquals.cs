@@ -3,36 +3,52 @@
 using System;
 
 
-
+/// <summary>
+/// We compare the current element with the next, if they match
+/// we increase count, if they dont we bring count vack to 1
+/// If count exceeds bestCount we replace bestCount and repeatedNum with current num
+/// At the end we make a check, if we dont have sequence of at least 2 elements
+/// we print message.
+/// </summary>
 class MaxSequenceEquals
 {
     static void Main()
     {
-        int repeatedNumb = int.MinValue;
-        int counter = 0;
-        int repetition = 0;
-        int[] digitsArray = { 2, 1, 1, 2, 3, 3, 2, 2, 2, 1 };
-        for (int i = 0; i < digitsArray.Length; i++)
+        int[] numArray = { 2, 1, 1, 2, 3, 3, 2, 2, 2, 1 };
+        int repeatedNum = numArray[0] ;
+        int count = 1;
+        int bestCount = 1;
+        for (int i = 0; i < numArray.Length-1; i++)
         {
-            if ((i < digitsArray.Length -1) && (digitsArray [i] == digitsArray [i+1]))
+            if (numArray[i] == numArray[i+1])
             {
-                counter++;
-            }
-
-            else 
-            {
-                if (counter > repetition)
+                count++;
+                if (count > bestCount)
                 {
-                    repetition = counter;
-                    repeatedNumb = digitsArray[i];
-                    counter = 0;
+                    bestCount = count;
+                    repeatedNum = numArray[i];
                 }
             }
+            else
+            {
+                count = 1;
+            }
         }
-        for (int i = 0; i < repetition; i++)
+
+        if (bestCount < 2)
         {
-            Console.Write(repeatedNumb);
+            Console.WriteLine("No sequence found");
         }
-        Console.WriteLine();
+        else
+        {
+            Console.Write("{");
+            for (int i = 0; i < bestCount; i++)
+            {
+                Console.Write(repeatedNum);
+            }
+
+            Console.WriteLine("}");
+            Console.WriteLine();
+        }
     }
 }
