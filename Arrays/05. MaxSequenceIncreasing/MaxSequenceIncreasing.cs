@@ -3,46 +3,68 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 
-
+/// <summary>
+/// Iterate array from second element comparing it to the previous one
+/// if bigger we add the prevoious, if not we check corner case 1 and 2
+/// and clean temporary variables (count, sequence)
+/// </summary>
 class MaxSequenceIncreasing
 {
     static void Main()
     {
-        int[] digitsArray = { 3, 2, 3, 4, 2, 2, 4 };
-        int counter = 1;
-        int repetition = 0;
-        int largestInSequence = 0;
-        for (int i = 0; i < digitsArray.Length - 1; i++)
+        int[] numArray = { 3, 2, 3, 4, 2, 2, };
+        int count = 1;
+        int bestCount = 0;
+        StringBuilder sequence = new StringBuilder();
+        string bestSequence = "";
+
+        for (int i = 1; i < numArray.Length; i++)
         {
-            if (digitsArray[i] < digitsArray[i + 1])
+            if (numArray[i - 1] < numArray[i])
             {
-                counter++;
+                count++;
+                if (count > bestCount)
+                {
+                    bestCount++;
+                    sequence.Append(numArray[i - 1]);
+                    bestSequence = sequence.ToString();
+                }              
+                else
+                {
+                    sequence.Append(numArray[i - 1]);
+                }
+            }
+            else if (count > bestCount && bestCount != 0) // corner case 1 for the last elem in internat sequence
+            {
+                bestCount = count;
+                sequence.Append(numArray[i - 1]);
+                bestSequence = sequence.ToString();
             }
             else
             {
-                if (counter > repetition)
-                {
-                    repetition = counter;
-                    largestInSequence = i;
-                }
-                counter = 1;
+                count = 1;
+                sequence.Clear();
+            }
+            //corner case 2 if sequence ends at array.Length-1
+            if (numArray[i-1] < numArray[i] && i == numArray.Length-1) 
+            {
+                sequence.Append(numArray[i]);
+                bestSequence = sequence.ToString();
             }
         }
 
-        if (counter > repetition)
+        bestSequence.ToArray();
+        Console.Write("{");
+        foreach (var num in bestSequence)
         {
-            repetition = counter;
-            largestInSequence = digitsArray.Length - 1;
+            Console.Write(num + ", ");
         }
-
-        counter = 1;
-        for (int i = largestInSequence - repetition + 1; i < largestInSequence + 1; i++)
-        {
-            Console.Write("{0},", digitsArray[i]);
-        }
+        Console.Write("}");
         Console.WriteLine();
     }
-}
 
+}
