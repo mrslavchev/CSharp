@@ -2,37 +2,39 @@
 //	{2, 3, -6, -1, 2, -1, 6, 4, -8, 8}  {2, -1, 6, 4}
 //	Can you do it with only one loop (with single scan through the elements of the array)?
 
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-
-
+/// <summary>
+/// Using Kadane's algorithm here, it's simple:
+/// We store the sum in temp variable if it exceeds best sum
+/// bestSum = tempSum and we store the sequence in a string. Otherways we 
+/// clear both tempSum and tempSeq
+/// </summary>
 class LargestSubset
 {
     static void Main()
     {
-        int[] numberArray = { 2, 3, -6, -1, 2, -1, 6, 4, -8, 8 };
-        int currentSum = 0;
+        int[] numsArray = { 2, 3, -6, -1, 2, -1, 6, 4, -8, 8};
+        int tempSum = 0;
         int biggestSum = int.MinValue;
-        StringBuilder bestSequenceBuild = new StringBuilder();
+        StringBuilder tempSequence = new StringBuilder();
         string bestSequnce = "";
-        for (int i = 0; i < numberArray.Length; i++)
+        for (int i = 0; i < numsArray.Length; i++)
         {
-            currentSum = currentSum + numberArray[i];
-            bestSequenceBuild.AppendFormat("{0}, ", numberArray[i]);
-            if (currentSum > biggestSum)
+            tempSum = tempSum + numsArray[i];
+            tempSequence.AppendFormat("{0}, ", numsArray[i]);
+            if (tempSum > biggestSum)
             {
-                biggestSum = currentSum;
-                bestSequnce = bestSequenceBuild.ToString();
+                biggestSum = tempSum;
+                bestSequnce = tempSequence.ToString();
             }
-            if (currentSum < 0)
+            if (tempSum < 0)
             {
-                currentSum = 0;
-                bestSequenceBuild.Clear();
+                tempSum = 0;
+                tempSequence.Clear();
             }
         }
         Console.WriteLine("Sequence: \" {0} \" ", bestSequnce);

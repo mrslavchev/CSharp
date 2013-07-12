@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. MaxSequenceIncreasing",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. MaxSumOfKElements", "06. MaxSumOfKElements\06. MaxSumOfKElements.csproj", "{9347870F-CD1E-477A-BE0D-1ED6B1917A3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Quicksort", "07. Quicksort\07. Quicksort.csproj", "{A18CCC27-AE59-4DD6-9FB8-699A9C9ED4F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Selectionsort", "07. Quicksort\07. Selectionsort.csproj", "{A18CCC27-AE59-4DD6-9FB8-699A9C9ED4F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. LargestSubset", "08. LargestSubset\08. LargestSubset.csproj", "{FD355DA7-71BC-49BD-9AA2-84405D5F7032}"
 EndProject
