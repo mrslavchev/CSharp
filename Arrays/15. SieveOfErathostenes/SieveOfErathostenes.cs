@@ -1,10 +1,14 @@
-﻿/* Write a program that finds all prime numbers
- * in the range [1...10 000 000]. Use the sieve
- * of Eratosthenes algorithm (find it in Wikipedia).
- */
+﻿//ite a program that finds all prime numbers
+// the range [1...10 000 000]. Use the sieve
+// Eratosthenes algorithm (find it in Wikipedia).
+//
 
 using System;
-
+/// <summary>
+/// Using the Sieve of erathostenes we plant 
+/// true values in an array with 10000000 elements
+/// Than iterate and chech if index == true, print
+/// </summary>
 class SieveOfEratosthenes
 {
     static void Main()

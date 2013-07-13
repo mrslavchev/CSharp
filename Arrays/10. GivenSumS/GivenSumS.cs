@@ -1,10 +1,14 @@
 ﻿/* Write a program that finds in given array of
- * integers a sequence of given sum S (if present).
- * Example:      {4, 3, 1, 4, 2, 5, 8}, S=11  {4, 2, 5} */
+   integers a sequence of given sum S (if present).
+   Example:      {4, 3, 1, 4, 2, 5, 8}, S=11  {4, 2, 5} */
 
 using System;
 using System.Text;
-
+/// <summary>
+/// Use second loop to iterate the subset current - end
+/// We compare the sum to s and if we find a match we break
+/// If not we print there's no such sum
+/// </summary>
 class SequenceByGivenSum
 {
     static void Main()
@@ -21,19 +25,21 @@ class SequenceByGivenSum
             {
                 sum = sum + randomArray[j];
                 sequenceBuild.AppendFormat("{0}, ", randomArray[j]);
+                if (sum == s)
+                {
+                    sequence = sequenceBuild.ToString();
+                    Console.WriteLine("This sequence has the sum of {0} : {1}", s, sequence);
+                    return;
+                }
 
-                if (sum > s)
+                else if (sum > s)
                 {
                     sequenceBuild.Clear();
                     sum = 0;
                     break;
                 }
-                if (sum == s)
-                {
-                    sequence = sequenceBuild.ToString();
-                    Console.WriteLine("This sequence has the sum of {0} : {1}", s, sequence);
-                }
-                if ((sum < s) && (j == randomArray.Length -1))
+               
+                else if ((sum < s) && (j == randomArray.Length -1))
                 {
                     Console.WriteLine("Sequence not present");
                     return;

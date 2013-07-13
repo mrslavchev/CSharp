@@ -1,35 +1,35 @@
-﻿/* Write a program that creates an array containing
- * all letters from the alphabet (A-Z). Read a word
- * from the console and print the index of each of its letters in the array.
- */
+﻿//Write a program that creates an array containing
+//all letters from the alphabet (A-Z). Read a word
+//from the console and print the index of each of its letters in the array.
+//
 
 using System;
-
+/// <summary>
+/// We fill the array of chars
+/// than compare every char of the word with all chars in the array
+/// if we find a match we print the char and it's index in the array.
+/// </summary>
 class LetterIndex
 {
     static void Main()
     {
-        int[] letterIndexes = new int[53];
-        //lowercase
-        for (int i = 1; i < letterIndexes.Length / 2 + 1; i++)
+        char[] alphabet = new char[26];
+        char letter = 'a';
+        for (int i = 0; i < alphabet.Length; i++)
         {
-            letterIndexes[i] = ('a' - 1) + i;
+            alphabet[i] = letter;
+            letter++;
         }
-        //Upercase
-        for (int i = letterIndexes.Length / 2 + 1, k = 0; i < letterIndexes.Length; i++, k++)
-        {
-            letterIndexes[i] = 'A' + k;
-        }
-        //Letter chercker
+
         Console.WriteLine("Enter a word:");
-        string inputWord = Console.ReadLine();
-        for (int i = 0; i < inputWord.Length; i++)
+        string inputWord = Console.ReadLine().ToLower(); //we exclude the upper casse here
+        for (int let = 0; let < inputWord.Length; let++)
         {
-            for (int j = 0; j < letterIndexes.Length; j++)
+            for (int index = 0; index < alphabet.Length; index++)
             {
-                if (inputWord[i] == letterIndexes[j])
+                if (inputWord[let] == alphabet[index])
                 {
-                    Console.WriteLine("Leter {0} has index: {1}", inputWord[i], j);
+                    Console.WriteLine("Leter {0} has index: {1}", inputWord[let], index);
                     break;
                 }
             }

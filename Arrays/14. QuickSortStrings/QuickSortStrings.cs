@@ -6,26 +6,18 @@ class QuickSort
 {
     static void Main(string[] args)
     {
-        // Create an unsorted array of string elements
-        string[] unsorted = { "dog", "cat", "bull","parrot", "quicksort", "son of a..."};
-
-        // Print the unsorted array
+        string[] unsorted = { "son of a...", "dog", "cat", "bull", "quicksort","parrot" };
         for (int i = 0; i < unsorted.Length; i++)
         {
             Console.Write(unsorted[i] + " ");
         }
-
         Console.WriteLine();
-
-        // Sort the array
+        
         Quicksort(unsorted, 0, unsorted.Length - 1);
-
-        // Print the sorted array
         for (int i = 0; i < unsorted.Length; i++)
         {
             Console.Write(unsorted[i] + " ");
         }
-
         Console.WriteLine();
     }
 
@@ -49,9 +41,9 @@ class QuickSort
             if (i <= j)
             {
                 // Swap
-                string tmp = elements[i];
+                string temp = elements[i];
                 elements[i] = elements[j];
-                elements[j] = tmp;
+                elements[j] = temp;
 
                 i++;
                 j--;

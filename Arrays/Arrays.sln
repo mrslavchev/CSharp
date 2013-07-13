@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20.KElementsInSet1toN", "20
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21. DistinctElements", "21. DistinctElements\21. DistinctElements.csproj", "{F753BF48-007A-4819-B78F-EC6447A863AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13. MergeSort", "13. MergeSort\13. MergeSort.csproj", "{6C63CC56-2D34-49D5-BB71-95BC51D2717C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -103,6 +105,10 @@ Global
 		{F753BF48-007A-4819-B78F-EC6447A863AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F753BF48-007A-4819-B78F-EC6447A863AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F753BF48-007A-4819-B78F-EC6447A863AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C63CC56-2D34-49D5-BB71-95BC51D2717C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C63CC56-2D34-49D5-BB71-95BC51D2717C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C63CC56-2D34-49D5-BB71-95BC51D2717C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C63CC56-2D34-49D5-BB71-95BC51D2717C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
