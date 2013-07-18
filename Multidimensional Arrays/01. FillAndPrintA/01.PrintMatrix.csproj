@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FillAndPrintMatrix.cs" />
+    <Compile Include="PrintMatrix.cs" />
+    <Compile Include="PrintMatrixTypeA.cs" />
+    <Compile Include="PrintMatrixTypeB.cs" />
+    <Compile Include="PrintMatrixTypeC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
