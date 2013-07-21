@@ -5,7 +5,7 @@
 /// Contains separate methods for reading the matrix, printing it, scan the matrix for 
 /// the 3x3 square, sum the square itself, and print the result
 /// </summary>
-public class FindSquare3x3
+public class FindSquare3X3
 {
     /// <summary>
     /// Reads matrix from the console

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. FindSquare3x3", "02. FindSquare3x3\02. FindSquare3x3.csproj", "{47F5E755-ED27-4687-94D6-523781242840}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. FindSquare3X3", "02. FindSquare3x3\02. FindSquare3X3.csproj", "{47F5E755-ED27-4687-94D6-523781242840}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. LongestSequence", "03. LongestSequence\03. LongestSequence.csproj", "{ECB29790-C635-443B-AC47-643ADA74FEF3}"
 EndProject
