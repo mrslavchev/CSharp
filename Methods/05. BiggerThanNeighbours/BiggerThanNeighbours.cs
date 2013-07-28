@@ -1,26 +1,57 @@
 ﻿using System;
-
-class BiggerThanNeighbours
+/*Write a method that checks if the element at given position
+ * in given array of integers is bigger than its two neighbors (when such exist).
+*/
+public class BiggerThanNeighbours
 {
-    static bool IsInside(int[] arr, int i)
+    /// <summary>
+    /// Checks if given index has neighbours or is on the borders
+    /// </summary>
+    /// <param name="array">Takes int array as fiest param</param>
+    /// <param name="index">Takes index to check as second param</param>
+    /// <returns>bool value </returns>
+     static bool HasNeighbors(int[] array, int index ) 
     {
-        return 0 <= i && i < arr.Length;
+        if (index > 0 && index < array.Length -1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
-    static bool IsBigger(int[] arr, int i, int j)
+    /// <summary>
+    /// Check the neighbours for being bigger or not
+    /// </summary>
+    /// <param name="array"></param>
+    /// <param name="index"></param>
+    /// <returns></returns>
+    public static bool CompareToNeighbours(int[] array, int index) 
     {
-        return IsInside(arr, j) ? arr[i] > arr[j] : true;
-    }
-
-    static bool IsBiggerThanNeighbours(int[] arr, int i)
-    {
-        return IsBigger(arr, i, i - 1) && IsBigger(arr, i, i + 1);
+        if (HasNeighbors(array, index))
+        {
+            if (array[index] > array[index - 1] && array[index] > array[index + 1])
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
     }
 
     static void Main()
     {
-        int[] arr = { 1, 5, 2, 3, 3, 3, 4, 3, 4, 4, 5 };
-
-        for (int i = 0; i < arr.Length; i++) Console.WriteLine(arr[i] + ": " + IsBiggerThanNeighbours(arr, i));
+        int[] myArr = {1, 2, 3, 4, 1, 3, 5 };
+        int testInd = 3;
+        Console.WriteLine("Is {0} bigger than {1} and {2}?", myArr[testInd], myArr[testInd - 1], myArr[testInd + 1]);
+        Console.WriteLine(CompareToNeighbours(myArr, testInd));
     }
 }

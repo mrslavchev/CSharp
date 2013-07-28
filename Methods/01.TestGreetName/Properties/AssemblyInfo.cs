@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("01. FillAndPrintC")]
+[assembly: AssemblyTitle("01.TestGreetName")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("01. FillAndPrintC")]
+[assembly: AssemblyProduct("01.TestGreetName")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e5b953f4-2e5b-4f2a-96d8-13711de99229")]
+[assembly: Guid("d3be65c1-3167-4586-8769-3cd1c2c9eb73")]
 
 // Version information for an assembly consists of the following four values:
 //

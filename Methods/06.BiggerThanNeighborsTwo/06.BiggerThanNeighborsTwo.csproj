@@ -41,11 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BiggerThanNeighborsTwo.cs" />
+    <Compile Include="FirstBiggerIndex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\05. BiggerThanNeighbours\05. BiggerThanNeighbours.csproj">
+      <Project>{a76d8f97-f511-466c-8eda-4c9e7041969d}</Project>
+      <Name>05. BiggerThanNeighbours</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

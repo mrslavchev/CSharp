@@ -1,14 +1,31 @@
 ﻿using System;
+using System.Text;
+/*Write a method that reverses the digits of given decimal number. Example: 256  652
+*/
 
 class ReversingDigits
 {
-    static int ReverseDigits(int n, int r = 0)
+    /// <summary>
+    /// Converts to string, uses strinbuilder to build the new string, than converts to decimal
+    /// </summary>
+    /// <param name="number">Takes decimal number as forst parameter</param>
+    /// <returns>Decimal number</returns>
+    static decimal Reverse(decimal number)
     {
-        return n == 0 ? r : ReverseDigits(n / 10, r * 10 + n % 10);
-    }
+        string input = number.ToString();
+        StringBuilder strOutput = new StringBuilder();
+        for (int i = input.Length-1; i >= 0; i--)
+        {
+            strOutput.Append(input[i]);
+        }
 
+        string output = strOutput.ToString();
+        return Convert.ToDecimal(output);
+    }
+    
     static void Main()
     {
-        Console.WriteLine(ReverseDigits(123456));
+        decimal testDec = 1.3456m;
+        Console.WriteLine(Reverse(testDec));
     }
 }

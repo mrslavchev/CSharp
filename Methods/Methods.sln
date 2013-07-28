@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. HelloName", "01. HelloName\01. HelloName.csproj", "{560517FB-1821-4D25-8432-B6399998C27C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. GetMaxNumb", "02. GetMax\02. GetMaxNumb.csproj", "{7786B72E-4C0D-4B6C-9B80-0248E1BF9BE2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.GetBigger", "02. GetMax\02.GetBigger.csproj", "{7786B72E-4C0D-4B6C-9B80-0248E1BF9BE2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. LastDigit", "03. LastDigit\03. LastDigit.csproj", "{7D4323B9-BA08-4A29-A275-9E7016FE988D}"
 EndProject
