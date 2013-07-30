@@ -5,18 +5,18 @@ using System;
 using System.Text;
 using System.Collections.Generic;
 
-class DecimalToBin
+public class DecimalToBin
 {
-    static string ConvertToBinary(int decValue) 
+    public static string ConvertToBinary(int decValue) 
     {
         List<int> tempBinary = new List<int>();
-        StringBuilder output = new StringBuilder();
         while (decValue != 0)
         {
             tempBinary.Add(decValue % 2);
             decValue = decValue / 2;
         }
 
+        StringBuilder output = new StringBuilder();
         tempBinary.Reverse();
         foreach (var item in tempBinary)
         {

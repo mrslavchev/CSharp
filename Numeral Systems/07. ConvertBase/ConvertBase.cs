@@ -1,50 +1,49 @@
 ﻿using System;
-
-class ConvertBase
+using System.Collections.Generic;
+/*Write a program that shows the binary representation of given 16-bit signed integer number (the C# type short).
+*/
+public class ConvertBase
 {
-   
-    static char GetChar(int i)
+    private static Dictionary<char, int> numericSymbols = new Dictionary<char, int>()
     {
-        if (i >= 10) return (char)('A' + i - 10);
-        else return (char)('0' + i);
+        {'0', 0}, {'1', 1}, {'2', 2}, {'3', 3}, {'4', 4}, {'5', 5}, {'6', 6}, {'7', 7},
+        {'8', 8}, {'9', 9}, {'A', 10}, {'B', 11}, {'C', 12}, {'D', 13}, {'E', 14}, {'F', 15},
+    };
+
+    static int Readbase() 
+    {
+        Console.WriteLine("Please enter the base of the numeric system:");
+        int numBase = int.Parse(Console.ReadLine());
+        if (numBase < 2 || numBase > 16)
+        {
+            throw new ArgumentException();
+        }
+
+        return numBase;
     }
 
-    
-    static int GetNumber(string s, int i)
+    static int SbaseToDecimal(string input, int sBase) 
     {
-        if (s[i] >= 'A') return s[i] - 'A' + 10;
-        else return s[i] - '0';
+        for (int i = 0; i < input.Length; i++)
+        {
+            
+        }
     }
 
-   
-    static string Base10ToBaseX(int d, int x)
+    /*
+    static string DecimalToDbase(int tempDecimal) 
     {
-        string h = String.Empty;
-
-        for (; d != 0; d /= x) h = GetChar(d % x) + h;
-
-        return h;
     }
 
-    
-    static int BaseXToBase10(string h, int x)
-    {
-        int d = 0;
-
-        for (int i = h.Length - 1, p = 1; i >= 0; i--, p *= x)
-            d += GetNumber(h, i) * p;
-
-        return d;
-    }
-
-    static string BaseXToBaseY(string n, int x, int y)
-    {
-        return Base10ToBaseX(BaseXToBase10(n, x), y);
-    }
+   */
 
     static void Main()
     {
+        int s = Readbase();
         string input = Console.ReadLine();
-        Console.WriteLine(BaseXToBaseY(input, 168, 10));
+        int d = Readbase();
+        //int tempDecimal = SbaseToDecimal(input);
+        //string output = DecimalToDbase(tempDecimal);
+        Console.WriteLine(s + " " + d);
     }
 }

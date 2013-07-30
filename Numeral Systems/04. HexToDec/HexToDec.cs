@@ -1,5 +1,9 @@
 ﻿using System;
-
+/*Write a program to convert hexadecimal numbers to their decimal representation.
+*/
+/// <summary>
+/// Using the ocnvert class
+/// </summary>
 class HexToDec
 {
     static void Main()
