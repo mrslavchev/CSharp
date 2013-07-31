@@ -24,10 +24,22 @@ public class ConvertBase
 
     static int SbaseToDecimal(string input, int sBase) 
     {
+        int decSum = 0;
         for (int i = 0; i < input.Length; i++)
         {
-            
+            int position = input.Length - i - 1;
+            if (input[position] == '0')
+            {
+                continue;
+            }
+            else
+            {
+                int value = numericSymbols[input[i]];
+                decSum += (int)(value * Math.Pow(sBase, position));
+            }
         }
+
+        return decSum;
     }
 
     /*
@@ -40,10 +52,12 @@ public class ConvertBase
     static void Main()
     {
         int s = Readbase();
+        Console.WriteLine("Please write down a number in {0} numeral system", s);
         string input = Console.ReadLine();
         int d = Readbase();
-        //int tempDecimal = SbaseToDecimal(input);
+        int tempDecimal = SbaseToDecimal(input, s);
+        Console.WriteLine(tempDecimal);
         //string output = DecimalToDbase(tempDecimal);
-        Console.WriteLine(s + " " + d);
+        //Console.WriteLine(s + " " + d);
     }
 }
