@@ -50,8 +50,8 @@ public class BiggerThanNeighbours
     static void Main()
     {
         int[] myArr = {1, 2, 3, 4, 1, 3, 5 };
-        int testInd = 3;
-        Console.WriteLine("Is {0} bigger than {1} and {2}?", myArr[testInd], myArr[testInd - 1], myArr[testInd + 1]);
+        int testInd = 0;
+        Console.WriteLine("Is {0} bigger than it's neighbours?", myArr[testInd]);
         Console.WriteLine(CompareToNeighbours(myArr, testInd));
     }
 }
