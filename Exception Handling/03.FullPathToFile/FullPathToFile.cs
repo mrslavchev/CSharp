@@ -6,54 +6,42 @@ class FullPathToFile
 {
     static void Main()
     {
-        Console.WriteLine("Enter the full path of the file you want to read: ");
-        string filePath = Console.ReadLine();
-        ReadFile(filePath);
-    }
-
-    static void ReadFile(string filePath)
-    {
         try
         {
-            string fileContent = File.ReadAllText(filePath);
-            Console.WriteLine("The content of the file is: ");
-            Console.WriteLine(fileContent);
-        }
-        catch (DirectoryNotFoundException)
-        {
-            Console.WriteLine("The file path contains a directory that cannot be found!");
-        }
-        catch (FileNotFoundException)
-        {
-            Console.WriteLine("The file '{0}' was not found!", filePath);
-        }
-        catch (ArgumentNullException)
-        {
-            Console.WriteLine("No file path is given!");
+            //You can use the .cs file for this task, by right click on it and take full path from properties
+        Console.WriteLine("Plaese enter the full path to the file you would like to read.");
+        string filePath =Console.ReadLine();
+        string input = System.IO.File.ReadAllText(@filePath);
+        Console.WriteLine(input);
         }
         catch (ArgumentException)
         {
-            Console.WriteLine("The entered file path is not correct!");
+            Console.Error.WriteLine("Wrong input");
         }
         catch (PathTooLongException)
         {
-            Console.WriteLine("The entered file path is too long - 248 characters are the maximum!");
+            Console.Error.WriteLine("Path or filename exceeds allowed length");
         }
-        catch (UnauthorizedAccessException uoae)
+        catch (DirectoryNotFoundException)
         {
-            Console.WriteLine(uoae.Message);
+            Console.Error.WriteLine("Incomplete path");
         }
-        catch (SecurityException)
+        catch (UnauthorizedAccessException)
         {
-            Console.WriteLine("You don't have the required permission to access this file!");
+            Console.Error.WriteLine("Access denied");
+        }
+        catch (FileNotFoundException)
+        {
+            Console.Error.WriteLine("No such file");
         }
         catch (NotSupportedException)
         {
-            Console.WriteLine("Invalid file path format!");
+            Console.Error.WriteLine("Path is in an invalid format");
         }
-        catch (IOException ioe)
+        catch (SecurityException)
         {
-            Console.WriteLine(ioe.Message);
+            Console.Error.WriteLine("You have no permission to view this file");
         }
+        
     }
 }

@@ -2,43 +2,41 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-
-
-
+    /// <summary>
+    /// We are using the WebClient class and it's method DownloadFile.
+    /// Exceptions thrown by this method are available in MSDN. 
+    /// </summary>
     class DownloadingFile
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            string address = "http://www.devbg.org/img/Logo-BASD.jpg";
-            string file = "logo.jpg";
-
-            using (WebClient myClient = new WebClient())
+            // the using block has the responsibility to free the resources when operation is over
+            //replaces the finally part
+            using (WebClient downloader = new WebClient())
             {
                 try
                 {
-                    myClient.DownloadFile(address, file);
-                    Console.WriteLine("The file was downloaded in the Debug folder of the project!");
-                }
-                catch (ArgumentNullException)
-                {
-                    Console.WriteLine("No-value provided for the web-address (or null value). Please specify a valid address.");
-                }
-                catch (ArgumentException)
-                {
-                    Console.WriteLine("The web-address name is empty. Please specify a valid address.");
+                    string remoteURI = "http://devbg.org/img/";
+                    string image = "Logo-BASD.jpg";
+                    string webResource = remoteURI + image;
+                    Console.WriteLine("Downloading File \"{0}\" from \"{1}\" .......\n\n", image, webResource);
+                    downloader.DownloadFile(webResource, image);
+                    Console.WriteLine("Successfully Downloaded File \"{0}\" from \"{1}\"", image, webResource);
+                    // The file is successfully downloaded in 04. DownloadingFile/bin/debug folder
+                    Console.WriteLine("\nDownloaded file saved in the following file system folder:\n\t" + AppDomain.CurrentDomain.BaseDirectory);
                 }
                 catch (WebException)
                 {
-                    Console.WriteLine("The URL was not found! Please make sure the address is correct.");
+                    Console.Error.WriteLine("Destination unreachable");
+                }
+                catch (ArgumentNullException)
+                {
+                    Console.Error.WriteLine("Adress parameter is null");
                 }
                 catch (NotSupportedException)
                 {
-                    Console.WriteLine("This operation is already performed by another method.");
+                    Console.Error.WriteLine("Multiple threads called that method");
                 }
-
             }
-
         }
     }
