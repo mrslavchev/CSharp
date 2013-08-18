@@ -1,0 +1,8 @@
+1 StreamWriter writes text files. It enables easy and efficient text output.
+2 It is best placed in a using-statement to ensure it is removed from memory when no longer needed. 
+3 It provides several constructors and many methods.
+4 Constructor
+5 Example
+6 We first declare and initialize a new StreamWriter instance in a using construct. 
+7 Please note how the System.IO namespace is included at the top of the file. 
+8 The keyword using means different things in different places.

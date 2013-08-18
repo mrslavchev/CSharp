@@ -1,17 +1,37 @@
 ﻿﻿using System;
 using System.IO;
-
-class Program
+/*Write a program that compares two text files line by line and prints the number of lines
+ * that are the same and the number of lines that are different. Assume the files have equal number of lines.
+*/
+class CompareTwoFIles
 {
     static void Main()
     {
-        int n = 0, same = 0;
-
-        using (StreamReader input1 = new StreamReader("../../LoremIpsum.txt"))
-        using (StreamReader input2 = new StreamReader("../../outputFile.txt"))
-            for (string line1, line2; (line1 = input1.ReadLine()) != null && (line2 = input2.ReadLine()) != null; n++)
-                if (line1 == line2) same++;
-
-        Console.WriteLine("Same lines are: {0} and different are: {1}", same, n - same);
+        StreamReader reader = new StreamReader("../../FileOne.txt");
+        StreamReader secondReader = new StreamReader("../../FileTwo.txt");
+        using (reader)
+        {
+            using (secondReader)
+            {
+                string firstReaderLine;
+                string secondReaderLine;
+                int equalLines = 0;
+                int differentLines = 0;
+                while ((firstReaderLine = reader.ReadLine()) != null &&
+                        ((secondReaderLine = secondReader.ReadLine()) != null))
+                {
+                    if (firstReaderLine == secondReaderLine)
+                    {
+                        equalLines++;
+                    }
+                    else
+                    {
+                        differentLines++;
+                    }
+                }
+                
+                Console.WriteLine("Equal lines are: {0}\nDifferent lines are: {1}", equalLines, differentLines);
+            }
+        }
     }
 }

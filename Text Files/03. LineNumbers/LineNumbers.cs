@@ -1,15 +1,27 @@
 ﻿﻿using System;
 using System.IO;
-
-class Program
+/*Write a program that reads a text file and inserts line numbers in front of each of its lines. 
+ * The result should be written to another text file.
+*/
+class LineNumbers
 {
     static void Main()
     {
-        int n = 1;
-
-        using (StreamReader input = new StreamReader("../../LoremIpsum.txt"))
-        using (StreamWriter output = new StreamWriter("../../outputFile.txt"))
-            for (string line; (line = input.ReadLine()) != null; n++)
-                output.WriteLine("{0}.{1}", n, line);
+        StreamWriter writer = new StreamWriter("../../Output.txt");
+        StreamReader reader = new StreamReader("../../Example.txt");
+        using (writer)
+        {
+            using (reader)
+            {
+                string line = reader.ReadLine();
+                int lineCount = 1;
+                while (line != null)
+                {
+                    writer.WriteLine("{0} {1}", lineCount, line);
+                    lineCount++;
+                    line = reader.ReadLine();
+                }
+            }
+        }
     }
 }

@@ -1,33 +1,50 @@
 ﻿﻿﻿using System;
 using System.IO;
 using System.Collections.Generic;
-
+/*Write a program that reads a text file containing a list of strings, sorts them and saves them to another text file*/
 class SortStrings
 {
-    static List<string> ReadLines()
+    /// <summary>
+    /// Reads list of strings from a file
+    /// </summary>
+    /// <returns>List of string</returns>
+    static List<string> ReadList() 
     {
-        List<string> lines = new List<string>();
+        using (StreamReader reader = new StreamReader("../../input.txt"))
+        {
+            List<string> extract = new List<string>();
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+                extract.Add(line);
+            }
 
-        using (StreamReader input = new StreamReader("../../inputFile.txt"))
-            for (string line; (line = input.ReadLine()) != null; )
-                lines.Add(line);
-
-        return lines;
+            return extract;
+        }
     }
 
-    static void WriteLines(List<string> lines)
+    /// <summary>
+    /// Writes elements from a list to a text file
+    /// </summary>
+    /// <param name="output">Takes list as first parameter</param>
+    static void WriteList(List<string> output) 
     {
-        using (StreamWriter output = new StreamWriter("../../outputFile.txt"))
-            foreach (string line in lines)
-                output.WriteLine(line);
+        using (StreamWriter writer = new StreamWriter("../../output.txt"))
+        {
+            foreach (var item in output)
+        {
+            writer.WriteLine(item);
+        }
+        }
     }
 
+    /// <summary>
+    /// We use the sort method of generics, nothing fancy
+    /// </summary>
     static void Main()
     {
-        List<string> lines = ReadLines(); 
-
-        lines.Sort();
-
-        WriteLines(lines); 
+        List<string> input = ReadList();
+        input.Sort();
+        WriteList(input);
     }
 }
