@@ -1,11 +1,24 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-Vestibulum volutpat ullamcorper justo egestas congue. 
-Curabitur non ante nec massa adipiscing mollis et eget neque. 
-Nullam vestibulum massa venenatis lacus ullamcorper vel dapibus dolor auctor. 
-Integer at odio ligula. Nullam nec velit nunc. Suspendisse iaculis placerat dictum. A
-enean ligula nulla, vestibulum bibendum ultrices quis, vehicula eu justo. Morbi rutrum, 
-nulla lobortis scelerisque luctus, erat nisl scelerisque neque, sed scelerisque mauris nibh ut massa.
- Phasellus pulvinar commodo metus, non tempus arcu lacinia sit amet. Nulla fringilla lectus felis. Curabitur
- vulputate iaculis sapien vel cursus. Suspendisse dolor sem, rhoncus at pulvinar vitae, tempus eget libe
-ro. Etiam ullamcorper gravida hendrerit. Integer turpis nibh, sollicitudin vel tempus scelerisque, vul
-putate vitae odio.
+Software testing is an investigation conducted to provide stakeholders with information about the quality of the product
+ or service under test.[1] Software testing can also provide an objective, independent view of the software to allow the business
+ to appreciate and understand the risks of software implementation. Test techniques include, 
+but are not limited to the process of eecuting a program or application with the intent of finding software bugs
+ (errors or other defects).
+Software testing can be stated as the process of validating and verifying that
+ a computer program/application/product:
+meets the requirements that guided its design and development,
+work as expected,
+
+can be implemented with the same characteristics,
+and satisfies the needs of stakeholders.
+Software testing, 
+depending on the testing method employed, can be implemented at any time in the software development process. 
+Traditionally most of the test effort occurs after the requirements have been defined and the coding process has been completed,
+ but in the Agile approaches most of the test effort is on-going. As such, the methodology of the test is governed by the chosen 
+software development methodology.
+
+testable
+
+testtrix
+test123
+
+test_oyeah

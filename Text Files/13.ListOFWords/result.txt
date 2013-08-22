@@ -1,3 +1,0 @@
-dolor : 3
-ipsum : 1
-Lorem : 1
