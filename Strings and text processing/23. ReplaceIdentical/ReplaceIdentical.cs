@@ -5,8 +5,8 @@ class ReplaceIdentical
 {
     static void Main()
     {
-        string str = "aaaaabbbbbcdddeeeedssaa";
+        string text = "aaaabbbbbssssssjjjjjjllllddddddaaaddddddduuuuuu";
 
-        Console.WriteLine(Regex.Replace(str, @"(\w)\1+", "$1"));
+        Console.WriteLine(Regex.Replace(text, @"(\w)\1+", "$1")); // using back reference 
     }
 }

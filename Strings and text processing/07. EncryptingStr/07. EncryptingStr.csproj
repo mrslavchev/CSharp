@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{107368B1-F88D-4B71-96EB-B2A4DB48477B}</ProjectGuid>
+    <ProjectGuid>{AB6E98F4-FFDD-4F8B-8E0D-4C458C19BDFC}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_22.ListDifferent</RootNamespace>
-    <AssemblyName>_22.ListDifferent</AssemblyName>
+    <RootNamespace>_07.Cypher</RootNamespace>
+    <AssemblyName>_07.Cypher</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ListDifferent.cs" />
+    <Compile Include="EncryptingStr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

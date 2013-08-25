@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E862E0C4-7860-46E9-8FB8-94CCD4A3C5CE}</ProjectGuid>
+    <ProjectGuid>{00127E6B-8C9F-4E4B-8CDF-F1160A07E18E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_24.TwoWordsAlphabetical</RootNamespace>
-    <AssemblyName>24.TwoWordsAlphabetical</AssemblyName>
+    <RootNamespace>_21.HowManyTimes</RootNamespace>
+    <AssemblyName>_21.HowManyTimes</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TwoWordsAlphabetical.cs" />
+    <Compile Include="DifferentLetters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

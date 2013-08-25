@@ -1,16 +1,17 @@
 ﻿﻿using System;
 using System.Globalization;
-
+/*Write a program that reads two dates in the format: day.month.year and calculates the number of days between them*/
+/// <summary>
+/// Using the datetime class.
+/// </summary>
 class ReadTwoDates
 {
     static void Main()
     {
-        string start = "27.02.2006";
-        string end = "3.03.2006";
-
-        DateTime startDate = DateTime.ParseExact(start, "d.MM.yyyy", CultureInfo.InvariantCulture);
-        DateTime endDate = DateTime.ParseExact(end, "d.MM.yyyy", CultureInfo.InvariantCulture);
-
-        Console.WriteLine((endDate - startDate).TotalDays + " days");
+        Console.WriteLine("PLease write a first date:");
+        DateTime firstDate = DateTime.Parse(Console.ReadLine());
+        Console.WriteLine("PLease write a second date:");
+        DateTime secondDate = DateTime.Parse(Console.ReadLine());
+        Console.WriteLine("There are {0} days between them.", (secondDate - firstDate).Days);
     }
 }

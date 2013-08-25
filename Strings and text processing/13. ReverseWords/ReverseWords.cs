@@ -1,23 +1,26 @@
 ﻿﻿﻿using System;
-using System.Collections.Generic;
 using System.Text.RegularExpressions;
-
+using System.Text;
+/*Write a program that reverses the words in given sentence.
+*/
+/// <summary>
+/// Using regex we obtain the words, store them in matching collection
+/// and append them vice-versa to a stringbuilder.
+/// Hadn't been able to handle the exclemation mark. 
+/// </summary>
 class Program
 {
     static void Main()
     {
-        string str = "C#   is not C++, not PHP and not Delphi!  Test 1, 2,3";
+        string text = "C# is not C++, not PHP and not Delphi!";
+        string pattern = @"\w+[^\s!]{1,}";
+        MatchCollection words = Regex.Matches(text, pattern);
+        StringBuilder output = new StringBuilder();
+        for (int i = words.Count-1; i >= 0; i--)
+        {
+            output.AppendFormat("{0} ", words[i]);
+        }
 
-        string regex = @"\s+|,\s*|\.\s*|!\s*|$";
-
-        var words = new Stack<string>();
-
-        foreach (var word in Regex.Split(str, regex))
-            if (!String.IsNullOrEmpty(word)) words.Push(word);
-
-        foreach (var separator in Regex.Matches(str, regex))
-            Console.Write(words.Pop() + separator);
-
-        Console.WriteLine();
+        Console.WriteLine(output.ToString().TrimEnd() + '!'); //this is ugly, don't do it !!! :) 
     }
 }

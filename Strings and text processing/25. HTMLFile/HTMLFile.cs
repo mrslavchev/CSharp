@@ -1,22 +1,26 @@
 ﻿using System;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Text;
+/*Write a program that extracts from given HTML file its title (if available), and its body text without the HTML tags*/
 class ExtractText
 {
+    /// <summary>
+    /// We use streamreader to read from the file, we extract the content with regex and addd it to stringbuilder, trimming 
+    /// the empty space indents.
+    /// </summary>
     static void Main()
     {
-        StreamReader reader = new StreamReader(@"..\..\LinkedIn.html");
-        using (reader)
+        StringBuilder extract = new StringBuilder();
+        using (StreamReader reader = new StreamReader("../../LinkedIn.html"))
         {
-            string line = string.Empty;
-            MatchCollection matchProtocolAndSiteName = Regex.Matches(line, @"(?<=^|>)[^><]+?(?=<|$)");
-            while ((line = reader.ReadLine()) != null)
+            MatchCollection matches = Regex.Matches(reader.ReadToEnd(), "(?<=^|>)[^><]+?(?=<|$)");
+            foreach (var item in matches)
             {
-                matchProtocolAndSiteName = Regex.Matches(line, @"(?<=^|>)[^><]+?(?=<|$)");
-
-                foreach (var word in matchProtocolAndSiteName)
-                    Console.WriteLine(word);
+                extract.Append(item.ToString().TrimStart() +"\n");
             }
+
+            Console.WriteLine(extract);
         }
     }
 }

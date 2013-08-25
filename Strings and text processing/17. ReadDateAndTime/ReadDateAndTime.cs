@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Globalization;
-
+/*Write a program that reads a date and time given in the format: day.month.year hour:minute:second
+ * and prints the date and time after 6 hours and 30 minutes (in the same format) along with the day of week in Bulgarian.
+*/
 class ReadDateAndTime
 {
     static void Main()
     {
-        string str = "24.01.2013 23:00:00";
-
-        DateTime date = DateTime.ParseExact(str, "dd.MM.yyyy HH:mm:ss", CultureInfo.InvariantCulture);
-
-        date = date.AddHours(6.5);
-
-        Console.WriteLine("{0} {1}", date.ToString("dddd", new CultureInfo("bg-BG")), date);
+        Console.WriteLine("Please write a date and time in the format dd.mm.yyyy hh:mm:ss");
+        DateTime input = DateTime.Parse(Console.ReadLine());
+        input = input.AddHours(6.5);
+        Console.WriteLine(input);
+        Console.WriteLine(input.ToString("dddd", new CultureInfo("bg-BG")));
     }
 }

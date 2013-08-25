@@ -3,13 +3,18 @@
 
 ﻿using System;
 using System.Text.RegularExpressions;
-
+/// <summary>
+/// We find a match <upcase>(some text here)</upcase> 
+/// and we replace it with the value in the paranthesis, to uppercase.
+/// The value is returned by the group property of the Regex.Match()
+/// </summary>
 class ToUpperCase
 {
     static void Main()
     {
-        string str = "We are living in a <upcase>yellow submarine</upcase>. We don't have <upcase>anything</upcase> else.";
-
-        Console.WriteLine(Regex.Replace(str, "<upcase>(.*?)</upcase>", m => m.Groups[1].Value.ToUpper()));
+        string text = "We are living in a <upcase>yellow submarine</upcase>. We don't have <upcase>anything</upcase> else.";
+        string pattern = "<upcase>(.*?)</upcase>";
+        Console.WriteLine(Regex.Replace(text, pattern, m => m.Groups[1].Value.ToUpper()));
+        
     }
 }
