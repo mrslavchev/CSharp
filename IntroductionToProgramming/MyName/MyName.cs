@@ -5,7 +5,7 @@ class MyName
 {
     static void Main()
     {
-        Console.WriteLine("Viktor Slavchev");
+        Console.WriteLine("Bate Pesho");
     }
 }
 

@@ -1,19 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloCSharp", "HelloCSharp\HelloCSharp.csproj", "{49A07770-9565-42A3-AC02-8271CD6029D7}"
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20827.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.HelloCSharp", "HelloCSharp\01.HelloCSharp.csproj", "{49A07770-9565-42A3-AC02-8271CD6029D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyName", "MyName\MyName.csproj", "{9C04DCE4-A44E-4A8F-9AC2-B34EA4AF1FBC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.MyName", "MyName\02.MyName.csproj", "{9C04DCE4-A44E-4A8F-9AC2-B34EA4AF1FBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumbersTyping", "NumbersTyping\NumbersTyping.csproj", "{891B0AAE-0956-4866-8BD7-DF53199D4B05}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.NumbersTyping", "NumbersTyping\03.NumbersTyping.csproj", "{891B0AAE-0956-4866-8BD7-DF53199D4B05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrentDateTime", "CurrentDateTime\CurrentDateTime.csproj", "{84701BD4-82C0-45BE-A0A4-3946FBCF5435}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.CurrentDateTime", "CurrentDateTime\04.CurrentDateTime.csproj", "{84701BD4-82C0-45BE-A0A4-3946FBCF5435}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Square12345", "Square12345\Square12345.csproj", "{175740B4-DAF4-4E0D-B3E3-2AB6531D153D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Square12345", "Square12345\05.Square12345.csproj", "{175740B4-DAF4-4E0D-B3E3-2AB6531D153D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstTenMembers", "FirstTenMembers\FirstTenMembers.csproj", "{8FB401C2-9F95-48B3-A50F-8A09AC20E9A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.FirstTenMembers", "FirstTenMembers\06.FirstTenMembers.csproj", "{8FB401C2-9F95-48B3-A50F-8A09AC20E9A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgeNowAndAfter", "AgeNowAndAfter\AgeNowAndAfter.csproj", "{9838CBB9-80B1-4431-9C6B-64954B08D5CF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.AgeNowAndAfter", "AgeNowAndAfter\07.AgeNowAndAfter.csproj", "{9838CBB9-80B1-4431-9C6B-64954B08D5CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
