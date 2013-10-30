@@ -1,6 +1,9 @@
 ﻿using System;
 
-    class RectangleArea
+/// <summary>
+/// Write an expression that calculates rectangle’s area by given width and height
+/// </summary>
+class RectangleArea
 {
     static void Main()
     {

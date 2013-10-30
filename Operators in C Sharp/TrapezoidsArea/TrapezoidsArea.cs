@@ -1,5 +1,8 @@
 ﻿using System;
 
+/// <summary>
+/// Write an expression that calculates trapezoid's area by given sides a and b and height h.
+/// </summary>
 class TrapezoidsArea
 {
     static void Main()

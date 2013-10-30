@@ -1,14 +1,21 @@
 ﻿using System;
 
-    class DividedBy5And7
+/// <summary>
+/// Write a boolean expression that checks for given integer if it 
+/// can be divided (without remainder) by 7 and 5 in the same time.
+/// </summary>
+class DividedBy5And7
 {
+    /// <summary>
+    /// Quite simple, the smallest number divisible by 5 and 7 at the same time is 5*7
+    /// All number should be devided by 35 w/o remain to make the expression true.
+    /// </summary>
     static void Main()
     {
-        int num = 35;
-        bool res1 = (num % 5)==0;
-        bool res2 = (num % 7)==0;
-        bool result = (res1 & res2);
-        Console.WriteLine(" Is the number {0} divisible by 5 and 7 at the same time witouth a reminder? {1} ",num,result);
+        Console.WriteLine("PLease write a number to be devided");
+        int input = int.Parse(Console.ReadLine());
+        bool isDivisible = (input % 35) == 0;
+        Console.WriteLine("Is {0} divisible by 5 and 7 at the same time?\n{1}", input, isDivisible);
     }
 }
 

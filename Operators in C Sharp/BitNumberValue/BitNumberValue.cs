@@ -1,5 +1,8 @@
 ﻿using System;
 
+/// <summary>
+/// Write an expression that extracts from a given integer i the value of a given bit number b. Example: i=5; b=2  value=1.
+/// </summary>
 class BitNumberValue
 {
     static void Main()

@@ -1,5 +1,8 @@
 ﻿using System;
 
+/// <summary>
+/// Write an expression that checks if given positive integer number n (n ≤ 100) is prime. E.g. 37 is prime.
+/// </summary>
 class PrimeNumbers
 {
     static void Main()
@@ -11,6 +14,7 @@ class PrimeNumbers
             Console.WriteLine("1 isn't a prime number");
             return;
         }
+
         byte sqrt = (byte)Math.Sqrt(num);
         byte div = 2;
         bool prime = true;
@@ -20,8 +24,10 @@ class PrimeNumbers
             {
                 prime = false;
             }
+
             div++;
         }
+
         Console.WriteLine("Is {0} a prime number? {1}",num,prime);
 
     }
