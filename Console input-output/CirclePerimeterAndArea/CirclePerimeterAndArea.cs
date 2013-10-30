@@ -1,5 +1,8 @@
 ﻿using System;
 
+/// <summary>
+/// Write a program that reads the radius r of a circle and prints its perimeter and area.
+/// </summary>
 class CirclePerimeterAndArea
 {
     static void Main()

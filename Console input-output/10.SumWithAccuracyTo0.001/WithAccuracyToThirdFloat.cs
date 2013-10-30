@@ -1,5 +1,8 @@
 ﻿using System;
 
+/// <summary>
+/// Write a program to calculate the sum (with accuracy of 0.001): 1 + 1/2 - 1/3 + 1/4 - 1/5 + ...
+/// </summary>
 class WithAccuracyToThirdFloat
 {
     static void Main()

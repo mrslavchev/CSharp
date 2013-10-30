@@ -1,5 +1,8 @@
 ﻿using System;
 
+/// <summary>
+/// Write a program that reads 3 integer numbers from the console and prints their sum.
+/// </summary>
 class ReadNumbers
 {
     static void Main()

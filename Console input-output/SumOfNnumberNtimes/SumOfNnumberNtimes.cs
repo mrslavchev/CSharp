@@ -1,5 +1,8 @@
 ﻿using System;
 
+/// <summary>
+/// Write a program that gets a number n and after that gets more n numbers and calculates and prints their sum. 
+/// </summary>
 class ComplexNumberSum
 {
     static void Main()

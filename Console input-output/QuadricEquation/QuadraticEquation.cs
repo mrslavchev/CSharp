@@ -1,5 +1,9 @@
 ﻿using System;
 
+/// <summary>
+/// Write a program that reads the coefficients a, b and c of a quadratic 
+/// equation ax2+bx+c=0 and solves it (prints its real roots).
+/// </summary>
 class QuadraticEquation
 {
     static void Main()

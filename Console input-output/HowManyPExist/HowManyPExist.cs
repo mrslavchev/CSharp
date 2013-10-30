@@ -1,43 +1,28 @@
 ﻿using System;
 
+/// <summary>
+/// Write a program that reads two positive integer numbers and prints how many
+/// numbers p exist between them such that the reminder of the division by 5 is 0 (inclusive). 
+/// Example: p(17,25) = 2.
+/// </summary>
 class HowManyPExist
 {
     static void Main()
     {
-        Console.WriteLine("Please write down a number:");
-        uint num = uint.Parse(Console.ReadLine());
-        Console.WriteLine("Please write down another number:");
-        uint num2 = uint.Parse(Console.ReadLine());
-        uint p = 0;
-        uint exch = num2;
-        uint divider = 5;
-        if (num>num2)
+        Console.WriteLine("Please type first number:");
+        int num1 = int.Parse(Console.ReadLine());
+        Console.WriteLine("PLese type second number:");
+        int num2 = int.Parse(Console.ReadLine());
+        int count = 0;
+        for (int i = num1; i <= num2; i++)
         {
-            num2 = num;
-            num = exch;
-        }
-        else if (num==num2)
-        {
-            Console.WriteLine("Wrong input!");
-            return;
-        }
-
-        Console.WriteLine("The numbers bitween {0} and {1} are:", num, num2);
-
-        while  (num <= num2) 
-        {
-            uint res = num % divider;
-            if (res == 0)
+            if ((i % 5) == 0)
             {
-                
-                p++;
-                Console.Write("{0}, ",num);
-
+                count++;
             }
-            num++;
         }
-        Console.WriteLine("\nAnd their count is: "+p);
 
+        Console.WriteLine("{0} numbers exist", count);
     }
 }
 

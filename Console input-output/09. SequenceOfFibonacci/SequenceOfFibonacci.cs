@@ -1,5 +1,9 @@
 ﻿using System;
 
+/// <summary>
+/// Write a program to print the first 100 members of the sequence of Fibonacci: 
+/// 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, …
+/// </summary>
 class SequenceOfFibonacci
 {
     static void Main()
@@ -15,7 +19,6 @@ class SequenceOfFibonacci
             firstNumber = secondNumber;
             secondNumber = sum;
             Console.WriteLine(sum);
-
         }
 
     }

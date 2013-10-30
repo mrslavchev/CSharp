@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20827.3
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.ReadNumbers", "ReadNumbers\01.ReadNumbers.csproj", "{C64EE172-5B49-41FA-B0C9-0DC0C0BBDAEF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.CirclePerimeterAndArea", "CirclePerimeterAndArea\02.CirclePerimeterAndArea.csproj", "{28A89A8A-4817-46B3-81A9-08BB95E83E56}"
@@ -15,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.QuadraticEquation", "Qua
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.SumOfNnumberNtimes", "SumOfNnumberNtimes\07.SumOfNnumberNtimes.csproj", "{E07D5ADB-FC15-4CC9-B59A-9E6B10814D7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.PrintnUmbers1toN", "PrintnUmbers1toN\08.PrintnUmbers1toN.csproj", "{BB2E8FDA-E564-4282-9BA4-3F93EBB56357}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.PrintNumbers1toN", "PrintnUmbers1toN\08.PrintNumbers1toN.csproj", "{BB2E8FDA-E564-4282-9BA4-3F93EBB56357}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. SequenceOfFibonacci", "09. SequenceOfFibonacci\09. SequenceOfFibonacci.csproj", "{D41EEFA2-3F16-4513-88A4-7FCB115B226D}"
 EndProject
