@@ -1,11 +1,16 @@
 ﻿using System;
+/// <summary>
+/// Declare an integer variable and assign it with the value 254 in hexadecimal format.
+/// Use Windows Calculator to find its hexadecimal representation.
+/// </summary>
 
-    class IntHex
+class IntHex
 {
     static void Main()
     {
-        int a=0x100;
-            Console.WriteLine("100 in hex is: {0}",a );
+        int a = 0xFE;
+        Console.WriteLine("FE in hex is: {0}", a);
     }
 }
 
+   
