@@ -1,5 +1,8 @@
 ﻿using System;
 
+/// <summary>
+/// Write a program that prints all the numbers from 1 to N.
+/// </summary>
 class PrintNumbers1ToN
 {
     static void Main()

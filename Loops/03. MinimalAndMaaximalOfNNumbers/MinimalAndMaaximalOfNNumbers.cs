@@ -1,5 +1,8 @@
 ﻿using System;
 
+/// <summary>
+/// Write a program that reads from the console a sequence of N integer numbers and returns the minimal and maximal of them.
+/// </summary>
 class MinimalAndMaaximalOfNNumbers
 {
     static void Main()

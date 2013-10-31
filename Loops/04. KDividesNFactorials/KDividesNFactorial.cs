@@ -1,5 +1,8 @@
 ﻿using System;
 
+/// <summary>
+/// Write a program that calculates N!/K! for given N and K (1<K<N).
+/// </summary>
 class KDividesNFactorial
 {
     static void Main()

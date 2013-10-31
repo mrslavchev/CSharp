@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Numerics;
 
+/// <summary>
+/// Write a program that, for a given two integer numbers N and X, calculates the sum
+/// S = 1 + 1!/X + 2!/X2 + … + N!/XN
+/// </summary>
 class FactorielSumExpression
 {
     static void Main()
     {
-        // Write a program that, for a given two integer numbers N and X, calculates the sumS = 1 + 1!/X + 2!/X^2 + … + N!/X^N
-
         Console.WriteLine("Calculate sum S = 1 + 1!/X + 2!/X^2 + … + N!/X^N.\n");
         Console.Write("Enter number N = ");
         BigInteger n;

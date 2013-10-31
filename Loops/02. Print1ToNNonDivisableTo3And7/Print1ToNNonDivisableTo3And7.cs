@@ -1,5 +1,8 @@
 ﻿using System;
 
+/// <summary>
+/// Write a program that prints all the numbers from 1 to N, that are not divisible by 3 and 7 at the same time.
+/// </summary>
 class Print1ToNNonDivisableTo3And7
 {
     static void Main()
