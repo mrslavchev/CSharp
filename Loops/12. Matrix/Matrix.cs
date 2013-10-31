@@ -1,5 +1,8 @@
 ﻿using System;
 
+/// <summary>
+/// Write a program that reads from the console a positive integer number N (N < 20) and outputs a matrix like the following:
+/// </summary>
 class Matrix
 {
     static void Main()

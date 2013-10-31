@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Numerics;
+
+/// <summary>
+/// Write a program to calculate the Nth Catalan number by given N.
+/// </summary>
 class CatalanNumbers
 {
     static BigInteger FactorialCalc(BigInteger number)
