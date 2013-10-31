@@ -1,48 +1,34 @@
 ﻿using System;
 
+/// <summary>
+/// Write a program that shows the sign (+ or -) of the product of 
+/// three real numbers without calculating it. Use a sequence of if statements.
+/// </summary>
 class PlusOrMinusWithoutCalc
 {
     static void Main()
     {
-        Console.WriteLine("Please enter a number: ");
-        double a = double.Parse(Console.ReadLine());
-        Console.WriteLine("Please enter another number: ");
-        double b = double.Parse(Console.ReadLine());
-        Console.WriteLine("Please enter third number: ");
-        double c = double.Parse(Console.ReadLine());
-        bool zeroA = (a != 0);
-        bool zeroB = (b != 0);
-        bool zeroC = (c != 0);
-        bool comp1 =(a>0);
-        bool comp2 =(b>0);
-        bool comp3 =(c>0);
-        if (zeroA && zeroB && zeroC)
+        Console.WriteLine("Please typer 3 numbers:");
+        int[] numbers = new int[3];
+        for (int i = 0; i < numbers.Length; i++)
         {
-            if (comp1 && comp2 && comp3)
+            numbers[i] = int.Parse(Console.ReadLine());
+        }
+
+        bool isPositive = true;
+        foreach (var number in numbers)
+        {
+            if (number < 0)
             {
-                Console.WriteLine("The result is +");
-            }
-            else if (!(comp1 || comp2 || comp3))
-            {
-                Console.WriteLine("The result is -");
-            }
-            else if (comp1 ^ comp2 ^ comp3)
-            {
-                Console.WriteLine("Result +");
-            }
-            else if (!(comp3 && comp2 && comp3))
-            {
-                Console.WriteLine("Result -");
+                isPositive = false;
             }
             else
             {
-                Console.WriteLine("Result -");
+                isPositive = true;
             }
         }
-        else
-        {
-            Console.WriteLine("Wrong input, the result is zero");
-        }
+
+        Console.WriteLine("The sum of {0}, {1} and {2} is positive? \n{3}", numbers[0], numbers[1], numbers[2], isPositive);
     }
 }
 

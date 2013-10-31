@@ -2,7 +2,9 @@
 using System.Threading;
 using System.Globalization;
 
-
+/// <summary>
+/// Write a program that finds the greatest of given 5 variables.
+/// </summary>
 class GreatestOfFive
 {
     static void Main()

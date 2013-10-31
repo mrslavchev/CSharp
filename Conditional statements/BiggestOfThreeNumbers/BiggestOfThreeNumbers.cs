@@ -1,5 +1,8 @@
 ﻿using System;
 
+/// <summary>
+/// Write a program that finds the biggest of three integers using nested if statements.
+/// </summary>
 class BiggestOfThreeNumbers
 {
     static void Main()
