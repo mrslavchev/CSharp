@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.FirTree", "03.FirTree\03
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Tribonacci", "02.Tribonacci\02.Tribonacci.csproj", "{31C7B25A-03F7-43E0-8F98-113B69113D09}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.WeAllLoveBits", "04.WeAllLoveBits\04.WeAllLoveBits.csproj", "{017800D0-FD27-4CBC-90FA-9B6D1A6263BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{31C7B25A-03F7-43E0-8F98-113B69113D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31C7B25A-03F7-43E0-8F98-113B69113D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31C7B25A-03F7-43E0-8F98-113B69113D09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{017800D0-FD27-4CBC-90FA-9B6D1A6263BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{017800D0-FD27-4CBC-90FA-9B6D1A6263BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{017800D0-FD27-4CBC-90FA-9B6D1A6263BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{017800D0-FD27-4CBC-90FA-9B6D1A6263BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
