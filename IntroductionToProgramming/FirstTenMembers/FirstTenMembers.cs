@@ -10,7 +10,10 @@ class PrintNumbers
             {
                 Console.WriteLine(" {0}", i);
             }
-            else Console.WriteLine("-{0}", i);
+            else
+            {
+                Console.WriteLine("-{0}", i);
+            }
         }
     }
 }
