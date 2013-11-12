@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20827.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.FirTree", "03.FirTree\03.FirTree.csproj", "{7E2FD396-A9EB-44C4-9BCE-66946A0E2ED2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Tribonacci", "02.Tribonacci\02.Tribonacci.csproj", "{31C7B25A-03F7-43E0-8F98-113B69113D09}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E2FD396-A9EB-44C4-9BCE-66946A0E2ED2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E2FD396-A9EB-44C4-9BCE-66946A0E2ED2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E2FD396-A9EB-44C4-9BCE-66946A0E2ED2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E2FD396-A9EB-44C4-9BCE-66946A0E2ED2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31C7B25A-03F7-43E0-8F98-113B69113D09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31C7B25A-03F7-43E0-8F98-113B69113D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31C7B25A-03F7-43E0-8F98-113B69113D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31C7B25A-03F7-43E0-8F98-113B69113D09}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
