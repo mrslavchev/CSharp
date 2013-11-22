@@ -1,6 +1,6 @@
 ﻿using System;
 
-class Program
+class NextDate
 {
     static void Main(string[] args)
     {
