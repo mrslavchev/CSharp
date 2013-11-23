@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcellColumns", "ExcellColu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ANacci", "ANacci\ANacci.csproj", "{C071613E-BA96-4787-9175-7CEFB4B7E876}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenlandNumbers", "SevenlandNumbers\SevenlandNumbers.csproj", "{427154D0-15AC-4233-AB65-5B2EB807A960}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C071613E-BA96-4787-9175-7CEFB4B7E876}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C071613E-BA96-4787-9175-7CEFB4B7E876}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C071613E-BA96-4787-9175-7CEFB4B7E876}.Release|Any CPU.Build.0 = Release|Any CPU
+		{427154D0-15AC-4233-AB65-5B2EB807A960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{427154D0-15AC-4233-AB65-5B2EB807A960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{427154D0-15AC-4233-AB65-5B2EB807A960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{427154D0-15AC-4233-AB65-5B2EB807A960}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
