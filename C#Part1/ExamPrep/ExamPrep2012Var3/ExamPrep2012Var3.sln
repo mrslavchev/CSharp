@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20827.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripleRotationDigits", "ConsoleApplication1\TripleRotationDigits.csproj", "{3A440099-1651-41E7-972B-430E1A9E619C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuadronacciRectangle", "QuadronacciRectangle\QuadronacciRectangle.csproj", "{75B362BA-CDB1-4F9C-9987-7A909CA18785}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UkFlag", "UkFlag\UkFlag.csproj", "{A8A9D4EC-9B14-42E8-955B-B0AB73B3F6A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A440099-1651-41E7-972B-430E1A9E619C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A440099-1651-41E7-972B-430E1A9E619C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A440099-1651-41E7-972B-430E1A9E619C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A440099-1651-41E7-972B-430E1A9E619C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75B362BA-CDB1-4F9C-9987-7A909CA18785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75B362BA-CDB1-4F9C-9987-7A909CA18785}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75B362BA-CDB1-4F9C-9987-7A909CA18785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75B362BA-CDB1-4F9C-9987-7A909CA18785}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8A9D4EC-9B14-42E8-955B-B0AB73B3F6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8A9D4EC-9B14-42E8-955B-B0AB73B3F6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8A9D4EC-9B14-42E8-955B-B0AB73B3F6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8A9D4EC-9B14-42E8-955B-B0AB73B3F6A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
