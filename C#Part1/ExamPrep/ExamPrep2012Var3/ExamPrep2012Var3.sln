@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuadronacciRectangle", "Qua
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UkFlag", "UkFlag\UkFlag.csproj", "{A8A9D4EC-9B14-42E8-955B-B0AB73B3F6A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poker", "Poker\Poker.csproj", "{AB8A471B-3655-446E-9183-82FEEBAB0C25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A8A9D4EC-9B14-42E8-955B-B0AB73B3F6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8A9D4EC-9B14-42E8-955B-B0AB73B3F6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8A9D4EC-9B14-42E8-955B-B0AB73B3F6A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB8A471B-3655-446E-9183-82FEEBAB0C25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB8A471B-3655-446E-9183-82FEEBAB0C25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB8A471B-3655-446E-9183-82FEEBAB0C25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB8A471B-3655-446E-9183-82FEEBAB0C25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
