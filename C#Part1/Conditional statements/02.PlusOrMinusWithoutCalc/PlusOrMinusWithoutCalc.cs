@@ -8,27 +8,22 @@ class PlusOrMinusWithoutCalc
 {
     static void Main()
     {
-        Console.WriteLine("Please typer 3 numbers:");
+        Console.WriteLine("Please type 3 numbers:");
         int[] numbers = new int[3];
+        int minusCounter = 0;
         for (int i = 0; i < numbers.Length; i++)
         {
             numbers[i] = int.Parse(Console.ReadLine());
-        }
-
-        bool isPositive = true;
-        foreach (var number in numbers)
-        {
-            if (number < 0)
+            if (numbers[i] < 0)
             {
-                isPositive = false;
-            }
-            else
-            {
-                isPositive = true;
+                minusCounter++;
             }
         }
+        bool isEven = (minusCounter & 1) == 0;
+        Console.WriteLine("Whats the sign of the product of {0}, {1} and {2} ?", numbers[0], numbers[1], numbers[2]);
+        Console.WriteLine(isEven? "+" : "-");
 
-        Console.WriteLine("The sum of {0}, {1} and {2} is positive? \n{3}", numbers[0], numbers[1], numbers[2], isPositive);
+        Console.WriteLine("Check WITH calculating: The product is: {0}", numbers[0] * numbers[1] * numbers[2]);  
     }
 }
 
