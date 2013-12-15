@@ -85,6 +85,8 @@ class SurfaceOfTriangle
     /// <returns>Surface in mm^2</returns>
     static double FindSurfaceAngle(double sideA, double sideB, double angle)
     {
+        //Convert degrees to radians
+        angle = angle * (Math.PI / 180);
         double area = ((sideA * sideB) / 2) * Math.Sin(angle);
         return area;
     }
