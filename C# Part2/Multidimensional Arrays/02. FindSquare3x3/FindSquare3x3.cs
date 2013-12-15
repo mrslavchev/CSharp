@@ -54,7 +54,7 @@ public class FindSquare3X3
     }
 
     /// <summary>
-    /// Calculates a sum for a 3x3 suqare
+    /// Calculates a sum for a 3x3 square
     /// within a 2D array
     /// </summary>
     /// <param name="array">Takes 2D array as first parameter</param>
