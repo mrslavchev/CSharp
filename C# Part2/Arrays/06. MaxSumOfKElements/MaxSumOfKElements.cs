@@ -1,11 +1,10 @@
-﻿//Write a program that reads two integer numbers N and K and an array of N 
+﻿using System;
+using System.Text;
+//Write a program that reads two integer numbers N and K and an array of N 
 //elements from the console. Find in the array those K elements that have maximal sum.
 
-using System;
-using System.Text;
 /// <summary>
 /// Sort the array and print all values standing from length -3 to the end
-/// 
 /// </summary>
 class MaxSumOfKElements
 {
@@ -25,8 +24,8 @@ class MaxSumOfKElements
             Console.Write(arrN[i] + ", ");// read input fill the array with random values
 
         }
-        Console.WriteLine();
 
+        Console.WriteLine();
         int bestSum = 0;
         Array.Sort(arrN);
         Console.WriteLine("Numers are:");
@@ -35,6 +34,7 @@ class MaxSumOfKElements
             bestSum = bestSum + arrN[i];
             Console.Write(arrN[i] + ", ");
         }
+
         Console.WriteLine();
         Console.WriteLine("Best sum is: " + bestSum);
 

@@ -1,9 +1,8 @@
-﻿//ite a program that finds all prime numbers
+﻿using System;
+// Writeite a program that finds all prime numbers
 // the range [1...10 000 000]. Use the sieve
 // Eratosthenes algorithm (find it in Wikipedia).
-//
 
-using System;
 /// <summary>
 /// Using the Sieve of erathostenes we plant 
 /// true values in an array with 10000000 elements
@@ -24,6 +23,7 @@ class SieveOfEratosthenes
                 }
             }
         }
+
         for (int i = 2; i < primes.Length; i++)
         {
             if (primes[i] == false)
@@ -31,6 +31,7 @@ class SieveOfEratosthenes
                 Console.Write("{0} ", i);
             }
         }
+
         Console.WriteLine();
     }
 }

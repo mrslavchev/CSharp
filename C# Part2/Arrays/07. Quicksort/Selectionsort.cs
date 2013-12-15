@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-//Sorting an array means to arrange its elements in increasing order. Write a program 
-//to sort an array. Use the "selection sort" algorithm: Find the smallest element, 
-//move it at the first position, find the smallest from the rest, move it at the second position, etc.
+    //Sorting an array means to arrange its elements in increasing order. Write a program 
+    //to sort an array. Use the "selection sort" algorithm: Find the smallest element, 
+    //move it at the first position, find the smallest from the rest, move it at the second position, etc.
 
-namespace SortingArray
-{   
     /// <summary>
     /// Sorting merthod compares first element with the smallest of all other
     /// if j < min its replaced
@@ -40,9 +38,9 @@ namespace SortingArray
         {
             int[] integerArray = new int[20];
             Random filler = new Random();
-            for (int i = 0; i < integerArray.Length; i++)// a lazy way to fill the array with random
-            {                                            // values we use ramdom generator and add
-                int fill = filler.Next(-100, 1000);          // one random value 0-100 on each iteration
+            for (int i = 0; i < integerArray.Length; i++)   // a lazy way to fill the array with random
+            {                                               // values we use ramdom generator and add
+                int fill = filler.Next(-100, 1000);         // one random value 0-100 on each iteration
                 integerArray[i] = fill;
             }
 
@@ -60,4 +58,3 @@ namespace SortingArray
             }
         }
     }
-}

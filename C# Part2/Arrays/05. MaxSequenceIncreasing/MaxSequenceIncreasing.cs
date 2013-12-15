@@ -1,12 +1,9 @@
-﻿//Write a program that finds the maximal increasing sequence in an array. Example: {3, 2, 3, 4, 2, 2, 4}  {2, 3, 4}.
-
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-
+//Write a program that finds the maximal increasing sequence in an array. Example: {3, 2, 3, 4, 2, 2, 4}  {2, 3, 4}.
 /// <summary>
 /// Iterate array from second element comparing it to the previous one
 /// if bigger we add the prevoious, if not we check corner case 1 and 2
@@ -38,7 +35,8 @@ class MaxSequenceIncreasing
                     sequence.Append(numArray[i - 1]);
                 }
             }
-            else if (count > bestCount && bestCount != 0) // corner case 1 for the last elem in internat sequence
+            // Corner case 1 for the last elem in internal sequence.
+            else if (count > bestCount && bestCount != 0) 
             {
                 bestCount = count;
                 sequence.Append(numArray[i - 1]);
@@ -49,7 +47,8 @@ class MaxSequenceIncreasing
                 count = 1;
                 sequence.Clear();
             }
-            //corner case 2 if sequence ends at array.Length-1
+
+            //Corner case 2 if sequence ends at array.Length-1.
             if (numArray[i-1] < numArray[i] && i == numArray.Length-1) 
             {
                 sequence.Append(numArray[i]);

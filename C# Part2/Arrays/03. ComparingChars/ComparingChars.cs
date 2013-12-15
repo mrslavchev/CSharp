@@ -19,13 +19,11 @@ class ComparingChars
                 {                                           // We repeat the same steps in the else but vice versa
                     Console.WriteLine(firstEarlier);        
                     break;                                  
-                }
-                                           
+                }                                          
                 else if (firstArr[n] != secondArr[n])         
                 {
                     Console.WriteLine(secondEarlier);
                 }
-
                 else
                 {
                     matchingCount++;
@@ -33,7 +31,6 @@ class ComparingChars
                     {
                         Console.WriteLine("Both arrays are the same");
                     }
-
                     else if (matchingCount == secondArr.Length)
                     {
                         Console.WriteLine(secondEarlier);
@@ -41,7 +38,6 @@ class ComparingChars
                 }
             }
         }
-
         else
         {
             for (int i = 0; i < firstArr.Length; i++)
@@ -51,7 +47,6 @@ class ComparingChars
                     Console.WriteLine(firstEarlier);
                     break;
                 }
-
                 else if (firstArr[i] == secondArr[i])
                 {
                     matchingCount++;
@@ -60,7 +55,6 @@ class ComparingChars
                         Console.WriteLine(firstEarlier);
                     }
                 }
-
                 else
                 {
                     Console.WriteLine(secondEarlier);

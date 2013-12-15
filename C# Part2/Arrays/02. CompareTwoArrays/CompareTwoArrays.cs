@@ -2,8 +2,8 @@
 using System;
 
 class CompareTwoArrays
-{   // using a separate method to fill to read ints from the console
-    static int[] ReadingNumbers ()
+{   // Using a separate method to fill and read ints from the console
+    static int[] ReadNumbers ()
     {
         Console.WriteLine("Please enter the size of the array: ");
         int n = int.Parse(Console.ReadLine());
@@ -13,13 +13,14 @@ class CompareTwoArrays
         {
             arr[i] = int.Parse(Console.ReadLine());
         }
+
         return arr;
     }
 
     static void Main()
     {
-        int[] firstArr = ReadingNumbers();
-        int[] secondArr = ReadingNumbers();
+        int[] firstArr = ReadNumbers();
+        int[] secondArr = ReadNumbers();
         int matchCount = 0;
         if (firstArr.Length == secondArr.Length)
         {

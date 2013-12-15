@@ -1,9 +1,9 @@
-﻿/* Write a program that finds in given array of
+﻿using System;
+using System.Text;
+/* Write a program that finds in given array of
    integers a sequence of given sum S (if present).
    Example:      {4, 3, 1, 4, 2, 5, 8}, S=11  {4, 2, 5} */
 
-using System;
-using System.Text;
 /// <summary>
 /// Use second loop to iterate the subset current - end
 /// We compare the sum to s and if we find a match we break
@@ -31,23 +31,18 @@ class SequenceByGivenSum
                     Console.WriteLine("This sequence has the sum of {0} : {1}", s, sequence);
                     return;
                 }
-
                 else if (sum > s)
                 {
                     sequenceBuild.Clear();
                     sum = 0;
                     break;
-                }
-               
+                }              
                 else if ((sum < s) && (j == randomArray.Length -1))
                 {
                     Console.WriteLine("Sequence not present");
                     return;
                 }
-
             }
         }
-
-
     }
 }

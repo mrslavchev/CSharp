@@ -1,10 +1,8 @@
-﻿//Write a program that finds the index of
+﻿using System;
+
+//Write a program that finds the index of
 //given element in a sorted array of integers
 //by using the binary search algorithm (find it in Wikipedia).
-//
-
-using System;
-
 class BinarySearchIndex
 {
     /// <summary>
@@ -36,6 +34,7 @@ class BinarySearchIndex
                 return middleIndex;
             }
         }
+
         return -1;
     }
 
@@ -47,6 +46,7 @@ class BinarySearchIndex
         {
             Console.Write(item + ", ");
         }
+
         Console.WriteLine();
         Console.WriteLine("The key is: {0}", key);
         Console.WriteLine("The index is: " + BinarSearch(myArray, key));

@@ -1,11 +1,10 @@
-﻿//Write a program that finds the most frequent number in an array. Example:
-//	{4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3}  4 (5 times)
-
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+
+//Write a program that finds the most frequent number in an array. Example:
+//	{4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3}  4 (5 times)
 
 /// <summary>
 /// Exact same algorithm as task 4, just sort the array before start iterating.

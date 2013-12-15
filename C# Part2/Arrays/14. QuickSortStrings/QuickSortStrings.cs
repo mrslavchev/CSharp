@@ -49,5 +49,16 @@ class QuickSort
                 j--;
             }
         }
+
+        // Recursive calls
+        if (left < j)
+        {
+            Quicksort(elements, left, j);
+        }
+
+        if (i < right)
+        {
+            Quicksort(elements, i, right);
+        }
     }
 }

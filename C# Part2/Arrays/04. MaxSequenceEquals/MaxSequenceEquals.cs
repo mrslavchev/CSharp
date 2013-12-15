@@ -1,11 +1,10 @@
-﻿//Write a program that finds the maximal sequence of equal elements in an array.
+﻿using System;
+//Write a program that finds the maximal sequence of equal elements in an array.
 //              Example: {2, 1, 1, 2, 3, 3, 2, 2, 2, 1}  {2, 2, 2}
-using System;
-
 
 /// <summary>
 /// We compare the current element with the next, if they match
-/// we increase count, if they dont we bring count vack to 1
+/// we increase count, if they dont we bring count back to 1
 /// If count exceeds bestCount we replace bestCount and repeatedNum with current num
 /// At the end we make a check, if we dont have sequence of at least 2 elements
 /// we print message.

@@ -1,5 +1,5 @@
 ﻿using System;
-
+/*Write a program that reads two numbers N and K and generates all the variations of K elements from the set [1..N]. */
 class KElementsInSet1toN
 {
     static int N = int.Parse(Console.ReadLine());
