@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiverseCommunication", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zerg", "Zerg\Zerg.csproj", "{9B94A38E-8E48-4B7E-9135-569018C56712}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicWords", "MagicWords\MagicWords.csproj", "{818B3D3C-71A5-4A56-ABAF-CE268EBCFF16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovingLetters", "MovingLetters\MovingLetters.csproj", "{A604B192-AE7E-4920-BE54-5A7759F8E420}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{9B94A38E-8E48-4B7E-9135-569018C56712}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B94A38E-8E48-4B7E-9135-569018C56712}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B94A38E-8E48-4B7E-9135-569018C56712}.Release|Any CPU.Build.0 = Release|Any CPU
+		{818B3D3C-71A5-4A56-ABAF-CE268EBCFF16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{818B3D3C-71A5-4A56-ABAF-CE268EBCFF16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{818B3D3C-71A5-4A56-ABAF-CE268EBCFF16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{818B3D3C-71A5-4A56-ABAF-CE268EBCFF16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A604B192-AE7E-4920-BE54-5A7759F8E420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A604B192-AE7E-4920-BE54-5A7759F8E420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A604B192-AE7E-4920-BE54-5A7759F8E420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A604B192-AE7E-4920-BE54-5A7759F8E420}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
