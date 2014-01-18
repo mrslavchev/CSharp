@@ -25,11 +25,7 @@ class LastDigit
     /// </summary>
     static void Main()
     {
-        for (int i = 0; i < 10; i++)
-        {
-            Console.WriteLine(PrintLastDigit(i.ToString()));
-        }
-
-        Console.WriteLine(PrintLastDigit("r"));
+        string number = Console.ReadLine();
+        Console.WriteLine(PrintLastDigit(number));
     }
 }
