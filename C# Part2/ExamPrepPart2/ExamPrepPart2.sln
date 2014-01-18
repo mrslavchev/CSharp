@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovingLetters", "MovingLett
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncodeAndEncrypt", "EncodeAndEncrypt\EncodeAndEncrypt.csproj", "{4B8CFD4B-532C-4008-8A94-38B9C649CBEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DurankulakNumbers", "DuranKulakNumbers\DurankulakNumbers.csproj", "{943E62CB-5444-4A0E-9143-12FF23B74C5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4B8CFD4B-532C-4008-8A94-38B9C649CBEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B8CFD4B-532C-4008-8A94-38B9C649CBEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B8CFD4B-532C-4008-8A94-38B9C649CBEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{943E62CB-5444-4A0E-9143-12FF23B74C5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{943E62CB-5444-4A0E-9143-12FF23B74C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{943E62CB-5444-4A0E-9143-12FF23B74C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{943E62CB-5444-4A0E-9143-12FF23B74C5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
