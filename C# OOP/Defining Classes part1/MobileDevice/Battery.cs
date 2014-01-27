@@ -80,7 +80,7 @@ public class Battery
     public override string ToString()
     {
         StringBuilder output = new StringBuilder();
-        output.AppendFormat("Battery: Brand: {0}, Type: {1}, Hours idle: {2}, Hour talk: {3} ", this.Model, this.Type, this.HoursIdle, this.HoursTalk);
+        output.AppendFormat("Battery: Brand: {0}, Type: {1}, Hours idle: {2}, Hours to talk: {3} ", this.Model, this.Type, this.HoursIdle, this.HoursTalk);
         return output.ToString();
     }
     

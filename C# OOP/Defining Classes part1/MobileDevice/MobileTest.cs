@@ -7,12 +7,12 @@ public class MobileTest
 {
     public static void PerformTest()
     {
-        GSM[] mobiles = 
-    {
-        new GSM("Huavei", "Samsung"), 
-        new GSM("Xperia", "Sony", 1000, "Kiro"),
-        new GSM("Windows phone", "Microsoft", 5, "Bill")
-    };
+        GSM[] mobiles = new GSM[]
+        {
+            new GSM("Huavei", "Samsung"), 
+            new GSM("Xperia", "Sony", 1000, "Kiro"),
+            new GSM("Windows phone", "Microsoft", 5, "Bill")
+        };
 
         foreach (var phone in mobiles)
         {

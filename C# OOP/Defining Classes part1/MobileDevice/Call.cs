@@ -12,7 +12,7 @@ public class Call
     private string startTime;
     private int dialedNumber;
     private int duration;
-    public const decimal Price = 0.37m;
+    public const decimal Price = 0.37m; 
 
     // Properties
     public string StartTime 
