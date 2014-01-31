@@ -1,224 +1,183 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Linq;
+using System.Reflection;
 
-namespace Matrix
+public class Matrix<T> : IEnumerable<T>
+    where T : IComparable, new()
 {
-    public class Matrix<T> where T : struct, IComparable, IFormattable, IConvertible, IComparable<T>, IEquatable<T>
+    private int rows;
+
+    public int Rows
     {
-        // Fields
-        private int row;
-        private int column;
-        private T[,] matrixArray;
-
-
-        // Properties
-        public int Row
+        get { return rows; }
+        set 
         {
-            get
+            if (value <= 0)
             {
-                return this.row;
-            }
-            set
-            {
-                if (value < 1)
-                {
-                    throw new IndexOutOfRangeException("Row must be positive");
-                }
-                else
-                {
-                    this.row = value;
-                }
-            }
-        }
-        public int Column
-        {
-            get
-            {
-                return this.column;
-            }
-            set
-            {
-                if (value < 1)
-                {
-                    throw new IndexOutOfRangeException("column must be positive");
-                }
-                else
-                {
-                    this.column = value;
-                }
-            }
-        }
-        // indexer
-        public T this[int row, int column]
-        {
-            get
-            {
-                if ((row > -1) && (column > -1) && ((row < this.Row) && (column < this.Column)))
-                {
-                    return this.matrixArray[row, column];
-                }
-                else
-                {
-
-                    throw new IndexOutOfRangeException("Matrix indexes must be positive");
-                }
-            }
-            set
-            {
-                if ((row > -1) && (column > -1) && ((row < this.Row) && (column < this.Column)))
-                {
-                    matrixArray[row, column] = value;
-
-                }
-                else
-                {
-                    throw new IndexOutOfRangeException("Matrix indexes");
-                }
-            }
-        }
-
-        // Constructor
-        public Matrix(T[,] matrix)
-        {
-            this.Row = matrix.GetLength(0);
-            this.Column = matrix.GetLength(1);
-            this.matrixArray = matrix;
-        }
-        public Matrix(int row, int column)
-        {
-            this.Row = row;
-            this.Column = column;
-            this.matrixArray = new T[row, column];
-        }
-
-        public static Matrix<T> operator +(Matrix<T> m1, Matrix<T> m2)
-        {
-            if (m1.row != m2.row && m1.column != m2.column)
-            {
-                throw new System.ArgumentException("To add matrixes, they must be with same dimentions");
+                throw new ArgumentException(String.Format("Invalid row value {0}", value));
             }
             else
             {
-                Matrix<T> result = new Matrix<T>(m1.row, m1.column);
-                for (int i = 0; i < m1.row; i++)
-                {
-                    for (int j = 0; j < m1.column; j++)
-                    {
-                        result[i, j] = (dynamic)m1[i, j] + m2[i, j];
-                    }
-                }
-                return result;
+                this.rows = value;
             }
         }
-        public static Matrix<T> operator -(Matrix<T> m1, Matrix<T> m2)
+    }
+    private int cols;
+
+    public int Cols
+    {
+        get { return cols; }
+        set 
         {
-            if (m1.row != m2.row && m1.column != m2.column)
+            if (value <= 0)
             {
-                throw new System.ArgumentException("To substract matrixes, they must be with same dimentions");
+                throw new ArgumentException(String.Format("Invalid col value {0}", value));
             }
             else
             {
-                Matrix<T> result = new Matrix<T>(m1.row, m1.column);
-                for (int i = 0; i < m1.row; i++)
-                {
-                    for (int j = 0; j < m1.column; j++)
-                    {
-                        result[i, j] = (dynamic)m1[i, j] - m2[i, j];
-                    }
-                }
-                return result;
+                this.cols = value;
             }
         }
-        public static Matrix<T> operator *(Matrix<T> m1, Matrix<T> m2)
-        {
-            if (m1.row != m2.column)
-            {
-                throw new System.ArgumentException("To multiply matrixes, rows of first must be same as columns of second");
-            }
-            else
-            {
-                Matrix<T> result = new Matrix<T>(m1.row, m1.column);
-                for (int i = 0; i < m1.row; i++)
-                {
-                    for (int j = 0; j < m1.column; j++)
-                    {
-                        result[i, j] = default(T);
-                        for (int k = 0; k < m1.column; k++)
-                        {
-                            result[i, j] += (dynamic)m1[i, k] * m2[k, j];
-                        }
-                    }
-                }
-                return result;
-            }
-        }
-        public static bool operator true(Matrix<T> m)
-        {
-            for (int i = 0; i < m.Row; i++)
-            {
-                for (int j = 0; j < m.Column; j++)
-                {
-                    if (!m[i, j].Equals(default(T)))
-                    {
-                        return true;
-                    }
-                }
-            }
-            return false;
-        }
-        public static bool operator false(Matrix<T> m)
-        {
-            for (int i = 0; i < m.Row; i++)
-            {
-                for (int j = 0; j < m.Column; j++)
-                {
-                    if (!m[i, j].Equals(default(T)))
-                    {
-                        return false;
-                    }
-                }
-            }
-            return true;
-        }
-        public static bool operator !(Matrix<T> m)
-        {
-            if (m)
-            {
-                return false;
-            }
+    }
 
-            else
+    private T[,] elements;
+
+    // Constructors
+
+    public Matrix()
+    { }
+
+    public Matrix(int row, int col)
+    {
+        this.Rows = row;
+        this.Cols = col;
+        this.elements = new T[Rows, Cols];
+    }
+
+    // Indexer
+    public T this[int rowIndex, int colIndex]
+    {
+        get 
+        {
+            if ((rowIndex < 0 || rowIndex >= Rows) || (colIndex < 0 || colIndex >= Cols))
             {
-                return true;
+                throw new IndexOutOfRangeException("Invalid index!");
+            }
+            return this.elements[rowIndex, colIndex];
+        }
+        set 
+        {
+            if ((rowIndex < 0 || rowIndex >= Rows) || (colIndex < 0 || colIndex >= Cols))
+            {
+                throw new IndexOutOfRangeException("Invalid index!");
+            }
+            this.elements[rowIndex, colIndex] = value;
+        }
+    }
+
+    // Operator overloads 
+    public static Matrix<T> operator +(Matrix<T> matrix, Matrix<T> matrix2)
+    {
+        if ((matrix.Rows != matrix2.Rows) || (matrix.Cols != matrix2.Cols))
+        {
+            throw new ArgumentException("Matrix should be the same size.");
+        }
+
+        Matrix<T> result = new Matrix<T>(matrix.Rows, matrix.Cols);
+        for (int row = 0; row < matrix.Rows; row++)
+        {
+            for (int col = 0; col < matrix.Cols; col++)
+            {
+                result[row, col] = (dynamic)matrix[row, col] + matrix2[row, col];
             }
         }
 
-        public override string ToString()
+        return result;
+    }
+
+    public static Matrix<T> operator -(Matrix<T> matrix, Matrix<T> matrix2)
+    {
+        if ((matrix.Rows != matrix2.Rows) || (matrix.Cols != matrix2.Cols))
         {
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < this.row; i++)
-            {
-                for (int j = 0; j < this.column; j++)
-                {
-                    if (j == 0)
-                    {
-                        sb.Append("|".PadRight(3));
-                    }
-                    sb.Append(Convert.ToString(this.matrixArray[i, j]).PadRight(3));
-                    sb.Append("|".PadRight(3));
-                }
-                sb.Append("\n");
-                for (int j = 0; j < this.row; j++)
-                {
-                    sb.Append("------");
-                }
-                sb.Append("\n");
-            }
-            return sb.ToString();
+            throw new ArgumentException("Matrix should be the same size.");
         }
 
+        Matrix<T> result = new Matrix<T>(matrix.Rows, matrix.Cols);
+        for (int row = 0; row < matrix.Rows; row++)
+        {
+            for (int col = 0; col < matrix.Cols; col++)
+            {
+                result[row, col] = (dynamic)matrix[row, col] - matrix2[row, col];
+            }
+        }
+
+        return result;
+    }
+
+    public static Matrix<T> operator *(Matrix<T> matrix, Matrix<T> matrix2)
+    {
+        if ((matrix.Rows != matrix2.Rows) || (matrix.Cols != matrix2.Cols))
+        {
+            throw new ArgumentException("Matrix should be the same size.");
+        }
+
+        Matrix<T> result = new Matrix<T>(matrix.Rows, matrix.Cols);
+        for (int row = 0; row < matrix.Rows; row++)
+        {
+            for (int col = 0; col < matrix.Cols; col++)
+            {
+                result[row, col] = (dynamic)matrix[row, col] * matrix2[row, col];
+            }
+        }
+
+        return result;
+    }
+
+    public static bool operator true(Matrix<T> matrix)
+    {
+        return matrix.Contains(default(T));
+    }
+
+    public static bool operator false(Matrix<T> matrix)
+    {
+        return matrix.Contains(default(T));
+    }
+
+    public override string ToString()
+    {
+        StringBuilder builder = new StringBuilder();
+        for (int row = 0; row < Rows; row++)
+        {
+            for (int col = 0; col < Cols; col++)
+            {
+                builder.AppendFormat("{0} ", this.elements[row, col]);
+            }
+
+            builder.Append("\n");
+        }
+
+        return builder.ToString();
+    }
+
+
+    // Implementing IEnumerable to use LINQ queries.
+    public IEnumerator<T> GetEnumerator()
+    {
+        foreach (var t in elements)
+        {
+            if (t == null)
+            {
+                break;
+            }
+
+            yield return t;
+        }
+    }
+
+    System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+    {
+        return this.GetEnumerator();
     }
 }
