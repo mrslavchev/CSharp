@@ -1,28 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-
-public static class SBSubstring
+public static class StringBuilderExtensions
 {
-    public static StringBuilder Substring(this StringBuilder input, int start, int length)
+    public static StringBuilder Substring(this StringBuilder builder, int startIndex, int length)
     {
-        StringBuilder Substring = new StringBuilder();
-        if (start + length > input.Length)
+        if (startIndex + length >= builder.Length)
         {
-            throw new ArgumentException();
+            throw new ArgumentException("Out of range");
         }
 
-        int ending = start + length;
-
-        for (int i = start; i < ending; i++)
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i <= length; i++)
         {
-            Substring.Append(input[i]);
+            result.Append(builder[startIndex + i]);
         }
 
-        return Substring;
+        return result;
     }
 }
-

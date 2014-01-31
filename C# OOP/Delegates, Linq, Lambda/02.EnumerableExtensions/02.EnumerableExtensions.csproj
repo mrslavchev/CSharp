@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{62A4F2B8-2BBD-4A2B-9403-F64BF7D0CCC6}</ProjectGuid>
+    <ProjectGuid>{926D1302-8F36-420F-A14B-CC743D5DBFD0}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_05.LambdaLinqOrderBy</RootNamespace>
-    <AssemblyName>05.LambdaLinqOrderBy</AssemblyName>
+    <RootNamespace>EnumerableExtensions</RootNamespace>
+    <AssemblyName>EnumerableExtensions</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,9 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Output.cs" />
+    <Compile Include="ConsoleTest.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

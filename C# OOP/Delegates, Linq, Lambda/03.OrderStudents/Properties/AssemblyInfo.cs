@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("05.LambdaLinqOrderBy")]
+[assembly: AssemblyTitle("OrderStudentsFirstBeforeLast")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("05.LambdaLinqOrderBy")]
-[assembly: AssemblyCopyright("Copyright ©  2013")]
+[assembly: AssemblyProduct("OrderStudentsFirstBeforeLast")]
+[assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6a3d3c7b-5aa6-4d67-8234-829fce156184")]
+[assembly: Guid("08330f11-7eea-4344-b438-2133708553ef")]
 
 // Version information for an assembly consists of the following four values:
 //
