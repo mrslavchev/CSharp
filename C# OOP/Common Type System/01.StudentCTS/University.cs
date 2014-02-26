@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 /*Define a class Student, which contains data  about a student – three names, 
  * SSN, permanent address, mobile phone e-mail, course, specialty, university, faculty. Use  enumeration for the specialties, 
  * universities and faculties. Override standard methods, inherited by  System.Object – Equals(), ToString(), 

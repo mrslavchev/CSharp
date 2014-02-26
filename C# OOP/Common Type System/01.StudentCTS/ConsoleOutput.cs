@@ -1,21 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 class Program
 {
     static void Main(string[] args)
     {
-        Student firstStudent = new Student("Pesho", "Peshev", "Peshev", 1121, "Sofia, tam", "pesho@abv.bg", "08898898" //instance ot student
+        Student firstStudent = new Student("Pesho", "Peshev", "Peshev", 1121, "Sofia, tam", "pesho@abv.bg", "08898898"
             , 3, University.SU, Faculty.FMI, Specialty.Mathematics);
         Console.WriteLine("First student: \n" + firstStudent);
+
+        // Testing the deep clone.
         Student clone = firstStudent.Clone();
-        Console.WriteLine(clone); // deep clonening 
-        Console.WriteLine("If the two students are the same output should be \"true\": " 
+        Console.WriteLine(clone);
+        Console.WriteLine("If the two students are reffering the same object, output should be \"true\": " 
         + firstStudent.Equals(clone));
+        
+        // To demonstrate the opposite we make a a simple copy pointing to the same object.
+        Student testStudent = firstStudent;
+        Console.WriteLine("Demo of shallow copy - {0}", firstStudent.Equals(testStudent));
 
         Student secondStudent = new Student("Angel", "Atanasov", "Anastasov", 1151);
         Student thirdStudent = new Student("Anastas", "Angelov", "Atanasov", 2315);
@@ -32,7 +35,7 @@ class Program
         students.Add(fourthStudent);
         students.Add(fifthStudent);
 
-        IEnumerable<Student> query = students.OrderBy(Student => Student.FirstName); //using lambda function ot sort students by name
+        IEnumerable<Student> query = students.OrderBy(Student => Student.FirstName); 
         foreach (var student in query)
         {
             Console.WriteLine(student); 

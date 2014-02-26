@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 
-class Student : ICloneable, IComparable<Student> 
+class Student : ICloneable, IComparable<Student>
 {
-    public string FirstName {get; private set; }  //properties
+    #region Properties
+    public string FirstName {get; private set; } 
     public string SecondName { get; private set; }
     public string LastName { get; private set; }
     public int SSN { get; private set; }
@@ -18,7 +16,9 @@ class Student : ICloneable, IComparable<Student>
     public University UniversityName { get; protected set; }
     public Faculty FacultyName { get; protected set; }
     public Specialty SpecialtyName { get; protected set; }
+    #endregion
 
+    #region Constructors
     public Student(string firstName, string secondName, string lastName, int ssn, string permanentAddres,
         string eMail, string mobilePhone, byte? course, University universityName, Faculty facultyName, Specialty specialtyName)
     {
@@ -33,27 +33,32 @@ class Student : ICloneable, IComparable<Student>
         this.UniversityName = universityName;
         this.FacultyName = facultyName;
         this.SpecialtyName = specialtyName;
-    } //constructors
+    }
 
     public Student(string firstName, string secondName, string lastName, int ssn) :
         this(firstName, secondName, lastName, ssn, null,
        null, null, null, University.Other, Faculty.Other, Specialty.Other)
     { 
     }
+    #endregion
 
-    public static bool operator == (Student firstStudent, Student secondStudent) //implemetning ==
+    #region Operator and method overloads
+    public static bool operator == (Student firstStudent, Student secondStudent)
     {
         return Student.Equals(firstStudent, secondStudent);
     }
-    public static bool operator !=(Student firstStudent, Student secondStudent)  //implemetning !=
+
+    public static bool operator !=(Student firstStudent, Student secondStudent)
     {
         return !(Student.Equals(firstStudent, secondStudent));
     }
-    public override int GetHashCode() //implementing GetHashCode()
+
+    public override int GetHashCode()
     {
         return FirstName.GetHashCode() ^ SecondName.GetHashCode() ^ LastName.GetHashCode() ^ SSN.GetHashCode();
     }
-    public override string ToString() //implementing toString()
+
+    public override string ToString()
     {
         StringBuilder output = new StringBuilder();
         output.AppendLine(this.FirstName);
@@ -62,19 +67,21 @@ class Student : ICloneable, IComparable<Student>
         output.AppendLine(this.SSN.ToString());
         return output.ToString();
     } 
-    public Student Clone() //implementing ICloneable
+
+    public Student Clone()
     {
         Student protoSudent = this;
         Student result = new Student(this.FirstName, this.SecondName, this.LastName, this.SSN, this.PermanentAddress,
             this.Email,this.MobilePhone,this.Course, this.UniversityName, this.FacultyName, this.SpecialtyName);
         return result;
     }
+
     Object ICloneable.Clone()
     {
         return this.Clone();
     }
 
-    public int CompareTo(Student student) //implementing IComparable
+    public int CompareTo(Student student)
     {
         if (this.FirstName != student.FirstName)
         {
@@ -94,5 +101,6 @@ class Student : ICloneable, IComparable<Student>
         }
         return 0;
     }
+    #endregion
 }
 
