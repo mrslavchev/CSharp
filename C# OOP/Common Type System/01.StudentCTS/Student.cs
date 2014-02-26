@@ -87,18 +87,22 @@ class Student : ICloneable, IComparable<Student>
         {
             return (this.FirstName.CompareTo(student.FirstName));
         }
+
         if (this.SecondName != student.SecondName)
         {
             return (this.SecondName.CompareTo(student.SecondName));
         }
+
         if (this.LastName != student.LastName)
         {
             return(this.LastName.CompareTo(student.LastName));
         }
+
         if (this.SSN != student.SSN)
         {
             return(this.SSN.CompareTo(student.SSN));
         }
+
         return 0;
     }
     #endregion
