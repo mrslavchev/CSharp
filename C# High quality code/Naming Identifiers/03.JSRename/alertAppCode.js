@@ -1,5 +1,4 @@
-﻿//Refactor the following examples to produce code with well-named identifiers in JavaScript
-
+﻿// Refactor the following examples to produce code with well-named identifiers in JavaScript.
 
 function allertAppCode(event, argumens) {
     var userWindow = window;

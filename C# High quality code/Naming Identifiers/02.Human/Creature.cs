@@ -1,40 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-//Refactor the following examples to produce code with well-named identifiers in C#:
-
-
-class Creature
+﻿// Refactor the following examples to produce code with well-named identifiers in C#.
+public class Creature
 {
-    enum Gender { Male, Female };
+    private const string MISTER = "Mr.";
+    private const string MISS = "Mrs.";
+
+    public enum Gender
+    {
+        Male, Female
+    };
+
+    // Assumng input number might give us info for the person's gender.
+    public void CreateHuman(int inputNumber)  
+    {
+        Human firstHuman = new Human();
+        firstHuman.Age = inputNumber;
+        if (inputNumber % 2 == 0)
+        {
+            firstHuman.Name = MISTER;
+            firstHuman.HumanGender = Gender.Male;
+        }
+        else
+        {
+            firstHuman.Name = MISS;
+            firstHuman.HumanGender = Gender.Female;
+        }
+    }
 
     public class Human
     {
         public Gender HumanGender { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
-
-
-    }
-
-    public void CreateHuman(int InputNumber) //assumng input number might give us info for the person's gender 
-    {
-        Human FirstHuman = new Human();
-        FirstHuman.Age = InputNumber;
-        if (InputNumber % 2 == 0)
-        {
-            FirstHuman.Name = "Mr.";
-            FirstHuman.HumanGender = Gender.Male;
-        }
-        else
-        {
-            FirstHuman.Name = "Mrs.";
-            FirstHuman.HumanGender = Gender.Female;
-        }
     }
 }
-
-
-
