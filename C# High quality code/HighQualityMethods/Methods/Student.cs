@@ -1,27 +1,45 @@
 ﻿using System;
+using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace Methods
 {
-    class Student
+    public class Student
     {
         public string FirstName { get; set; }
+
         public string LastName { get; set; }
+
         public string OtherInfo { get; set; }
-        // to loosen some coupling refactored this method to take 2 args instead of one
-        public bool IsOlderThan(Student firstStudent, Student secondStudent)
+        
+        public bool IsOlderThan(Student compareStudent)
         {
-            DateTime firstDate =
-                DateTime.Parse(firstStudent.OtherInfo.Substring(firstStudent.OtherInfo.Length - 10));
-            DateTime secondDate =
-                DateTime.Parse(secondStudent.OtherInfo.Substring(secondStudent.OtherInfo.Length - 10));
-            if (firstDate > secondDate)
+            DateTime currentStudentDate = this.ExtractDateFromInfo();
+            DateTime compareStudentDate = compareStudent.ExtractDateFromInfo();
+            if (currentStudentDate < compareStudentDate)
             {
                 return true;
             }
+            else if (currentStudentDate > compareStudentDate)
+            {
+                return false;
+            }
             else
             {
-                throw new ArgumentException();
+                throw new ArgumentException("Can not compare equal dates.");
             }
+        }
+
+        /*To simplify the extraxtion method from the previous method.*/
+        private DateTime ExtractDateFromInfo() 
+        {
+            string datePattern = @"\d{2}\.\d{2}\.\d{4}";
+            string dateAsString = Regex.Match(this.OtherInfo, datePattern).ToString();
+            string parseFormat = "dd.MM.yyyy";
+            DateTime outputDate = DateTime.ParseExact(dateAsString, parseFormat,
+                CultureInfo.InvariantCulture);
+
+            return outputDate;
         }
     }
 }
