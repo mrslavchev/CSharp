@@ -42,8 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="File.cs" />
-    <Compile Include="UtilsExamples.cs" />
-    <Compile Include="Trigonometry.cs" />
+    <Compile Include="Examples.cs" />
+    <Compile Include="MathFormulas.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

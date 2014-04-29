@@ -47,7 +47,7 @@ namespace Methods
                 case 8: return "eight";
                 case 9: return "nine";
                 // It's very bad practice to miss default case so I added it.
-                default: throw new ArgumentException("Invalid input!"); 
+                default: throw new ArgumentException("Invalid input!Must be integer from 0 to 9."); 
             }
         }
 

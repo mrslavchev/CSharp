@@ -1,15 +1,44 @@
-﻿using System;
-
-namespace Abstraction
+﻿namespace Abstraction
 {
-    class Rectangle : Figure
+    using System;
+
+    public class Rectangle : Figure
     {
-        public int Width { get; private set; }
-        public int Heigth { get; private set; }
+        private int width;
+        private int height;
+
         public Rectangle(int width, int height)
         {
             this.Width = width;
             this.Heigth = height;
+        }
+
+        public int Width
+        {
+            get { return this.width; }
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentException("Width can not be negative or zero.");
+                }
+
+                this.width = value;
+            }
+        }
+
+        public int Heigth
+        {
+            get { return this.height; }
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentException("Height can not be negative or zero.");
+                }
+
+                this.height = value;
+            }
         }
 
         public override double CalculatePerimeter()

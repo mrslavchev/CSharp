@@ -4,15 +4,10 @@ using System.Text;
 
 namespace InheritanceAndPolymorphism
 {
-    public class LocalCourse : OffsiteCourse 
+    public class LocalCourse : Course 
     {
-        /// <summary>
-        /// The only difference in properties between two forms is the Lab
-        /// </summary>
-        public string Lab { get; set; }
-        /// <summary>
-        /// inherit all constructors from base
-        /// </summary>
+        private string lab;
+
         public LocalCourse(string name)
             : base(name)
         {
@@ -28,32 +23,34 @@ namespace InheritanceAndPolymorphism
         {
         }
 
-        public string GetStudentsAsString()
+        public LocalCourse(string courseName, string teacherName, IList<string> students, string lab)
+            : base(courseName, teacherName, students)
         {
-            return base.ToString();
+            this.Lab = lab;
         }
-        /// <summary>
-        /// We only maka some modifications because of the Lab property, otherways we inherit from base class again.
-        /// </summary>
+
+        public string Lab 
+        {
+            get { return this.lab; }
+            set 
+            {
+                if (lab == string.Empty)
+                {
+                    throw new ArgumentException("Lab can not be empty string.");
+                }
+
+                this.lab = value;
+            }
+        }
+
         public override string ToString()
         {
-            StringBuilder result = new StringBuilder();
-            result.Append("LocalCourse { Name = ");
-            result.Append(base.Name);
-            if (base.TeacherName != null)
-            {
-                result.Append("; Teacher = ");
-                result.Append(base.TeacherName);
-            }
-            result.Append("; Students = ");
-            result.Append(base.GetStudentsAsString());
-            if (this.Lab != null)
-            {
-                result.Append("; Lab = ");
-                result.Append(this.Lab);
-            }
-            result.Append(" }");
-            return result.ToString();
+            StringBuilder output = new StringBuilder();
+            output.Append("Local course { Name = ");
+            output.Append(base.ToString());
+            output.AppendFormat("; Lab: {0}", this.Lab ?? string.Empty );
+
+            return output.ToString();
         }
     }
 }
