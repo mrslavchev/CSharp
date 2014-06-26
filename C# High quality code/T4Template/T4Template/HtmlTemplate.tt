@@ -1,0 +1,27 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".html" #>
+<#
+    string [] names = {"Pesho", "Gosho", "Minka", "Ganka"};
+    string githubRepo = @"https://github.com/mrslavchev";
+ #>
+
+<html>
+    <body>
+        <ul>
+        <#
+            foreach(var item in names)
+            {
+        #>
+            <li><#=item #></li>  
+        <#          
+            }
+        #> 
+        </ul>
+        <h1>Github profile.</h1>
+        <a href='<#= githubRepo #>'>Visit my github page here.</a>
+    </body>
+</html>
